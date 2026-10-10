@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Unreal Engine Official Emblem in White -->
+  <circle cx="50" cy="50" r="46" fill="none" stroke="#ffffff" stroke-width="5"/>
+  <path d="M 50 18 L 50 38 M 30 27 L 42 42 M 70 27 L 58 42" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M 36 40 C 30 45, 25 55, 25 65 C 25 76, 34 83, 44 83 C 51 83, 56 80, 60 75 L 60 62 C 57 65, 53 67, 48 67 C 42 67, 38 63, 38 56 C 38 49, 43 45, 50 45 C 57 45, 62 49, 62 56 L 62 75 C 66 70, 75 60, 75 50 C 75 40, 67 34, 58 34" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+</svg>

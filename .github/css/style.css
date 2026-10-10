@@ -1,0 +1,799 @@
+/* ==========================================================================
+   Mateusz Szwarc - Game Designer Portfolio
+   Design System Inspired by Wix Studio (matiszwarc.wixstudio.com/portfolio)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Dark Paper / Charcoal Studio Palette */
+  --bg-primary: #0c0d12;
+  --bg-secondary: #13151c;
+  --bg-card: rgba(19, 21, 28, 0.88);
+  --bg-card-hover: rgba(26, 29, 39, 0.95);
+  --bg-glass: rgba(12, 13, 18, 0.88);
+
+  --border-subtle: rgba(255, 255, 255, 0.12);
+  --border-accent: rgba(255, 255, 255, 0.35);
+  --border-glow: rgba(255, 255, 255, 0.8);
+
+  --text-primary: #ffffff;
+  --text-secondary: #c3c3c3; /* Wix exact silver-grey */
+  --text-muted: #848792;
+
+  /* Accents */
+  --accent-ue: #ffffff;
+  --accent-unity: #ffffff;
+  --accent-cyan: #00f3ff;
+  --accent-magenta: #ff007f;
+  --accent-gold: #fbbf24;
+
+  /* Fonts */
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Transitions */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.18s ease;
+  --transition-normal: 0.3s var(--ease-spring);
+
+  --max-width: 1200px;
+  --header-height: 80px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Subtle Canvas Grid Background */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+.vignette-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, transparent 65%, rgba(6, 7, 10, 0.85) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+section {
+  padding: 5rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   Header & Navigation (Matching Wix Layout)
+   ========================================================================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-subtle);
+  z-index: 100;
+  transition: all var(--transition-normal);
+}
+
+.site-header.scrolled {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.brand-block {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  transition: color var(--transition-fast);
+}
+
+.brand-role {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  position: relative;
+  transition: color var(--transition-fast);
+  padding: 0.4rem 0;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #ffffff;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  transition: width var(--transition-normal);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+  width: 100%;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.cv-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.15rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.cv-pill-btn:hover {
+  background: #ffffff;
+  color: #0c0d12;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.sfx-btn {
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.sfx-btn:hover, .sfx-btn.active {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.sfx-wave {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 12px;
+}
+
+.sfx-wave span {
+  width: 2px;
+  height: 4px;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+.sfx-btn.active .sfx-wave span:nth-child(1) { animation: wave 0.8s ease-in-out infinite alternate; }
+.sfx-btn.active .sfx-wave span:nth-child(2) { animation: wave 0.6s ease-in-out infinite alternate 0.2s; }
+.sfx-btn.active .sfx-wave span:nth-child(3) { animation: wave 0.9s ease-in-out infinite alternate 0.4s; }
+
+@keyframes wave {
+  0% { height: 3px; }
+  100% { height: 12px; }
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   Hero / Intro Banner
+   ========================================================================== */
+.hero-minimal {
+  padding-top: calc(var(--header-height) + 3.5rem);
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.hero-tagline {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.25;
+  max-width: 850px;
+  margin: 0 auto 1.2rem auto;
+  letter-spacing: -0.5px;
+}
+
+.hero-sub {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-width: 650px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.hero-links-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   Projects Section (Matching Wix Studio Cards)
+   ========================================================================== */
+.projects-section {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+.section-title-wix {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.projects-divider {
+  width: 60px;
+  height: 3px;
+  background: #ffffff;
+  margin: 0 auto 2.5rem auto;
+  border-radius: 2px;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 3.5rem;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.filter-btn.active {
+  background: #ffffff;
+  color: #0c0d12;
+  border-color: #ffffff;
+  font-weight: 700;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Project Card */
+.wix-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.wix-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 255, 255, 0.08);
+}
+
+/* Media Thumbnail */
+.card-media-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #08090d;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card-media-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+  display: block;
+}
+
+.wix-card:hover .card-media-wrap img {
+  transform: scale(1.04);
+}
+
+/* Engine Emblem Badge */
+.engine-badge-overlay {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 38px;
+  height: 38px;
+  background: rgba(12, 13, 18, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.engine-badge-overlay img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Card Content (Exact Wix text hierarchy) */
+.card-content {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.65rem;
+  letter-spacing: -0.3px;
+}
+
+.card-meta-line {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  line-height: 1.45;
+  margin-bottom: 0.25rem;
+  word-break: break-word;
+}
+
+.card-meta-line.roles {
+  color: #e2e8f0;
+  font-weight: 600;
+  margin-top: 0.35rem;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.btn-case-study {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+
+.btn-case-study:hover {
+  background: #ffffff;
+  color: #0c0d12;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.btn-itch-direct {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.btn-itch-direct:hover {
+  background: #fa5c5c;
+  color: #ffffff;
+  border-color: #fa5c5c;
+  box-shadow: 0 0 15px rgba(250, 92, 92, 0.4);
+}
+
+/* ==========================================================================
+   Project Detail Lightbox Modal
+   ========================================================================== */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(6, 7, 10, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-container {
+  background: #12141b;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 18px;
+  max-width: 860px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(255, 255, 255, 0.08);
+  transform: translateY(20px) scale(0.97);
+  transition: transform 0.3s var(--ease-spring);
+}
+
+.modal-backdrop.open .modal-container {
+  transform: translateY(0) scale(1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 38px;
+  height: 38px;
+  background: rgba(18, 20, 27, 0.8);
+  border: 1px solid var(--border-subtle);
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  transition: all var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  background: #ffffff;
+  color: #000;
+}
+
+.modal-banner-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-banner-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-body {
+  padding: 2.5rem;
+}
+
+.modal-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+.modal-play-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.4rem;
+  background: #fa5c5c;
+  color: #fff;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(250, 92, 92, 0.4);
+  transition: all var(--transition-fast);
+}
+
+.modal-play-btn:hover {
+  background: #ff4747;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(250, 92, 92, 0.6);
+}
+
+.modal-meta-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.25rem 0 1.75rem 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+}
+
+.modal-meta-item {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.modal-meta-item strong {
+  color: #fff;
+}
+
+.modal-sec-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 1.75rem 0 0.75rem 0;
+}
+
+.modal-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.modal-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+.modal-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   Contact Section (Matching Wix Studio Layout)
+   ========================================================================== */
+.contact-section-wix {
+  background: rgba(15, 17, 23, 0.7);
+  border-top: 1px solid var(--border-subtle);
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.contact-direct-box {
+  max-width: 650px;
+  margin: 0 auto 3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.contact-email-link {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-weight: 800;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  letter-spacing: -0.5px;
+}
+
+.contact-email-link:hover {
+  color: var(--text-secondary);
+  text-decoration: underline;
+}
+
+.contact-phone-text {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.socials-wix-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.wix-social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  color: #ffffff;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.wix-social-btn:hover {
+  background: #ffffff;
+  color: #0c0d12;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 2.5rem 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-body {
+    padding: 1.75rem;
+  }
+}

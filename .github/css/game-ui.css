@@ -1,0 +1,52 @@
+/* ==========================================================================
+   UI Helpers, Badges & Interactive Notifications
+   ========================================================================== */
+
+/* Toast Notice */
+.toast-notice {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #141720;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 255, 255, 0.1);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.toast-notice.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232733;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}

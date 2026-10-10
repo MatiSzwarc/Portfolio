@@ -41,8 +41,8 @@ export function initCanvasBackground(canvasId = "bg-canvas") {
       this.baseY = this.y;
       this.vx = (Math.random() - 0.5) * 0.7;
       this.vy = (Math.random() - 0.5) * 0.7;
-      this.alpha = Math.random() * 0.6 + 0.2;
-      this.color = Math.random() > 0.4 ? "0, 243, 255" : "139, 92, 246"; // Cyan or Violet
+      this.alpha = Math.random() * 0.5 + 0.15;
+      this.color = Math.random() > 0.3 ? "255, 255, 255" : "195, 195, 195"; // White or Silver
     }
 
     update() {
@@ -99,8 +99,8 @@ export function initCanvasBackground(canvasId = "bg-canvas") {
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(0, 243, 255, ${opacity})`;
-          ctx.lineWidth = 0.8;
+          ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.7})`;
+          ctx.lineWidth = 0.7;
           ctx.stroke();
         }
       }
@@ -111,12 +111,12 @@ export function initCanvasBackground(canvasId = "bg-canvas") {
         const dy = particles[i].y - mouse.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < MOUSE_RADIUS) {
-          const opacity = (1 - dist / MOUSE_RADIUS) * 0.28;
+          const opacity = (1 - dist / MOUSE_RADIUS) * 0.22;
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(mouse.x, mouse.y);
-          ctx.strokeStyle = `rgba(255, 0, 127, ${opacity})`;
-          ctx.lineWidth = 1.2;
+          ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
+          ctx.lineWidth = 1;
           ctx.stroke();
         }
       }
