@@ -16,7 +16,7 @@ export const projects = [
     metaLine1: "| Magic shop simulator | Multiplayer |",
     metaLine2: "| Two month | PC | Team Size: 12 |",
     metaLine3: "| System Designer | VFX |",
-    itchUrl: "",
+    itchUrl: "https://futuregames.itch.io/overbrewed",
     quickStats: [
       { label: "Engine", value: "Unreal Engine 5" },
       { label: "Duration", value: "2 Months" },
@@ -28,17 +28,22 @@ export const projects = [
       "System Designer",
       "VFX Artist"
     ],
+    designPillars: [
+      "Local co-op game working on few PCs at once.",
+      "Choose one of roles : Alchemist or Shopkeeper.",
+      "Receive order , cooperate with your teammate to finish it before customer get inpatient."
+    ],
+    systems: [
+      "Players can pick up, carry, and throw items.",
+      "Multiplayer game architecture.",
+      "Queue system for NPC.",
+      "Each station offers a different interaction."
+    ],
     highlights: [
       "In game, we have 5 different types of magic: Fire, Wind, Earth, Water, and Heal.",
       "Dynamic potion brewing system with ingredient combining and reaction feedback.",
       "Programmed custom Niagara particle visual effects for shiny, dynamic, and explosive reactions on screen.",
       "Store system balancing and cooperative task management under customer deadlines."
-    ],
-    detailedSections: [
-      {
-        title: "Magic & Systems",
-        content: "We designed 5 different types of magic: Fire, Wind, Earth, Water, and Heal. Programmed dynamic visual effects and balancing mechanics so each magical action feels distinct and satisfying."
-      }
     ]
   },
   {
@@ -68,18 +73,22 @@ export const projects = [
       "AI Programmer",
       "Level Design"
     ],
+    designPillars: [
+      "Local co-op.",
+      "Craft recipies solo or together.",
+      "Make sure customers leave with their order completed."
+    ],
+    systems: [
+      "Fast paced minigames different from each other.",
+      "Order management.",
+      "Two different AI state trees for Customers and Master."
+    ],
     highlights: [
       "Local multiplayer cooperative gameplay loop.",
       "Fast-paced minigames different from each other.",
       "Order management system.",
       "Particle system for responsive visual feedback.",
       "Two different AI state trees for Customers and Master."
-    ],
-    detailedSections: [
-      {
-        title: "Systems",
-        content: "- local multiplayer\n- fast paced minigames different from each other\n- Order management\n- Particle system for visual feedback\n- Two different AI state trees for Customers and Master"
-      }
     ]
   },
   {
@@ -108,24 +117,20 @@ export const projects = [
       "Animation Implementation",
       "UI Programming"
     ],
+    designPillars: [
+      "Turn-based tactical fantasy combat.",
+      "Synergistic spellcasting chains.",
+      "High-impact animated combat feedback."
+    ],
+    systems: [
+      "Action point combat economy.",
+      "Turn-order timeline queue.",
+      "Unreal Engine 5 animation state trees."
+    ],
     highlights: [
       "System Designer: Formulating tactical turn-based combat systems, ability interactions, and action economy.",
       "Animation Implementation: Implementing responsive animation state trees, combat montages, and hit-reaction feedback in Unreal Engine 5.",
       "UI Programming: Designing and programming tactical combat interfaces, turn-order trackers, and ability selection HUDs."
-    ],
-    detailedSections: [
-      {
-        title: "Systems & Combat Design",
-        content: "Designed tactical turn-based combat mechanics focusing on positioning, timing, and synergy between character skills in a dark fantasy setting."
-      },
-      {
-        title: "Animation & Gameplay Integration",
-        content: "Implemented fluid character combat animations and state trees to ensure every attack and ability cast feels impactful and responsive."
-      },
-      {
-        title: "UI Programming",
-        content: "Built clean and readable combat UI widgets for turn order, player status, and ability selection to streamline player decision-making."
-      }
     ]
   },
   {
@@ -139,7 +144,7 @@ export const projects = [
     pageUrl: "wastemancer.html",
     metaLine1: "| Fast Paced | Arcade game |",
     metaLine2: "| One month | PC / Console | Team Size: 11 |",
-    metaLine3: "| Narrative/Level Designer | VFX |",
+    metaLine3: "| Narrative, Level Designer | VFX |",
     itchUrl: "https://futuregames.itch.io/wastemancer",
     quickStats: [
       { label: "Engine", value: "Unity" },
@@ -153,25 +158,22 @@ export const projects = [
       "Level Design",
       "VFX Art"
     ],
+    designPillars: [
+      "Fast paced gameplay.",
+      "Easy to learn, hard to master.",
+      "Achieve the highest score possible."
+    ],
+    systems: [
+      "Imput combination.",
+      "Random enemy spawn.",
+      "Attack combination and cooldown.",
+      "Score based system."
+    ],
     highlights: [
       "VFX Art: Created textures and meshes in Photoshop & Blender, built shaders, and programmed them in the VFX Graph.",
       "Designed 5 magic types: Fire, Wind, Earth, Water, and Heal. Collaborated with programmers so Earth and Water attacks count depending on enemy position.",
       "Narrative Design: Explained the combat system, why the world looks the same despite magic, and why monsters are encountered as trash, boosting team creativity.",
       "Level Design: Designed the combat arena on paper, built the blockout, populated the area with artists, set up lighting, tweaked camera, and tuned post-processing."
-    ],
-    detailedSections: [
-      {
-        title: "VFX Art",
-        content: "I was responsible for creating various textures and meshes using Photoshop and Blender. Depending on the effect, I also made shaders and programmed them in the VFX graph. That was my main task after I completed the narrative part of the game. I asked programmers to help me with the earth attack and water to make it count depending on where the enemy is. In game, we have 5 different types of magic: Fire, Wind, Earth, Water, and Heal. And who doesn't like shiny, dynamic, explosive visual effects on screen? It makes the game so much better."
-      },
-      {
-        title: "Narrative Design",
-        content: "The narrative part of the game needed to explain all the ideas we developed: magic-related combat system, why the world looks the same despite access to magic, and why we encounter monsters as trash. Making narration boosted the creativity of our artists, defining who our character is with features that define him."
-      },
-      {
-        title: "Level Design",
-        content: "We wanted to include one area for the player to fight because of the development timeframe. For this demo, I presented the idea on paper, how the main screen could look, and then created a blockout. After that, I closely cooperated with artists deciding how to populate the area and what feeling the player should get. When everything was in place, I made a setup with lighting, tweaked the camera, and applied post-processing effects."
-      }
     ]
   },
   {
@@ -200,29 +202,23 @@ export const projects = [
       "System Design",
       "VFX Art"
     ],
+    designPillars: [
+      "resource management.",
+      "keep your population happy or face doom.",
+      "story driven situations with different outcomes.",
+      "resurrect your people but be careful not everyone likes to work with zombies."
+    ],
+    systems: [
+      "Place buildings on grid.",
+      "manage your population sending them to different work places.",
+      "Narrative events scaled with progression.",
+      "resurrection mechanic to boost your economy."
+    ],
     highlights: [
       "Narrative Design: Finished the story fast under a 1-week deadline to ensure all team members worked towards the same goal without misinterpretation.",
       "Quest Design: Created 17 quests with their own story and outcomes. Every five days an event triggers in the city and player choices have strategic meaning.",
       "System Design: Formulated progression balancing so the player can survive, manage food, 'PURR' energy, and build enough homes and workshops.",
       "VFX Art: Created all particle effects and shaders, integrating code into shaders for 'PURR' energy with dynamic visibility, twirling, and noise animations."
-    ],
-    detailedSections: [
-      {
-        title: "Narrative Design",
-        content: "As this project deadline was only one week long, we needed to finish the story as fast as possible, so every team member could have an understanding of the project. It's about working towards the same goal without misinterpretation. At the start, our game included magic, cats, and a necromancer as the main character. I answered why he revives people, why the game has a time limit, and created a background for goals in game, different endings, and quest design."
-      },
-      {
-        title: "Quest Design",
-        content: "I also made quests in the game. The main idea is that every five days, something happens in the city, and the player needs to react. Depending on what choices are made, different outcomes occur—choosing options has strategic meaning. Overall, I created 17 quests with their own story and outcome. Depending on the level of progression, they become easier or harder."
-      },
-      {
-        title: "System Design",
-        content: "To clearly write ideas for programmers to implement under a short deadline was a challenge. I proposed a progression in the game that was accepted. The game includes a lot of systems that we needed to balance so the player can survive: manage food, purr energy, and enough homes and workshops to progress."
-      },
-      {
-        title: "VFX Art",
-        content: "I was responsible for all particle effects. I mainly focused on looking into the code and placing them exactly where they should appear. The most complex was 'PURR' energy, the main resource of magic in the game. I wanted it to look cool with animations for filling and taking it. I integrated the code system into the shader: visibility depends on the value, and movement is done by twirling and noise."
-      }
     ]
   },
   {
@@ -251,25 +247,21 @@ export const projects = [
       "System Design",
       "VFX"
     ],
+    designPillars: [
+      "mobile game.",
+      "Tower defense , roguelite.",
+      "Kill enemies upgrade your towers, Lose upgrade further."
+    ],
+    systems: [
+      "Roguelite system of upgrades, temporary and permament ones.",
+      "Spawn of enemies from different sides with hand crafter encounters.",
+      "Gradually increase the difficulty to keep player engaged."
+    ],
     highlights: [
       "Balancing: During development, answered key design questions: How many enemies per wave? How many hits to kill an enemy? What type should enemy be? How much gold should the player have? How should difficulty increase during playtime?",
       "Constructed balancing system so it allows us to easily add more levels and introduce three different difficulties in future versions.",
       "Level Design: Constructed and balanced enemy paths from spawners on different sides of the map, varying travel time and enemy types to create unique level feels.",
       "System Design: Dual progression system based on both temporary in-run upgrades and permanent evolution points earned upon death to customize tower skill trees."
-    ],
-    detailedSections: [
-      {
-        title: "Balancing",
-        content: "During the development process, simple ideas multiplied a lot into a nightmare of numbers. How many enemies per wave? How many hits does the player tower require to kill the enemy? What type should enemy be? How much gold should the player have during game? How should the difficulty increase during playtime? These questions were answered after hours of balancing and going through numbers, adjusting values to fit the game system. The system is constructed in a way that allows us to easily add more levels and introduce three different difficulties in the future version."
-      },
-      {
-        title: "Level Design",
-        content: "Level Design and balancing are connected to the game, since the game has spawners with enemies. Placing them on different sides of the map and then constructing and balancing a path towards the main objective for the enemies was a task I took. With different amounts of spawners, travel time, and types of enemies coming from each, I was able to create levels that feel different for the player."
-      },
-      {
-        title: "System Design",
-        content: "The game system includes the main tower, and additional ones used by AI to defeat enemies. The progression system is based on both temporary upgrades and permanent ones. Each time a player dies, they get evolution points depending on how far they progressed. These points are used in the skill tree. Every tower has a different skill tree that also includes paths that completely change how the tower behaves. In the worst-case scenario, the player can choose to spend points to rearrange the skill tree for their needs."
-      }
     ]
   }
 ];
@@ -279,11 +271,10 @@ export const bioData = {
   title: "Game Designer",
   tagline: "Crafting engaging mechanics, tactile VFX, and responsive gameplay systems in Unreal Engine 5 and Unity.",
   email: "engmatiszwarc@gmail.com",
-  phone: "+48 794 531 839",
   cvUrl: "https://canva.link/f33jqqh899scqk2",
   linkedinUrl: "http://www.linkedin.com/in/mszw",
   itchUrl: "https://zabiii.itch.io",
   futuregamesUrl: "https://futuregames.se",
   experienceYears: "1.5 Years",
-  bio: "I am a Game Designer and Technical Artist with hands-on experience in Unreal Engine 5 (1 year, confident) and Unity (6 months). Having collaborated on multi-disciplinary teams of up to 12 developers at Futuregames and in competitive game jams, my work spans Product Ownership, lead design, state tree AI programming, and authoring explosive Niagara / VFX Graph particle effects."
+  bio: "I am a Game Designer with hands-on experience in Unreal Engine 5 (1 year, confident) and Unity (6 months). Having collaborated on multi-disciplinary teams of up to 12 developers at Futuregames and in competitive game jams, my work spans Product Ownership, lead design, state tree AI programming, and authoring explosive Niagara / VFX Graph particle effects."
 };

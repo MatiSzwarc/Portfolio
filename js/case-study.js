@@ -99,7 +99,7 @@ function initImageLightbox() {
 
   // Attach to zoomable image containers
   const zoomTargets = document.querySelectorAll(
-    '.gallery-img-wrap img, .sequential-img-wrap img, .zoomable-img, .balance-img-wrap img'
+    '.gallery-img-wrap img, .sequential-img-wrap img, .zoomable-img, .balance-img-wrap img, .picture-lane-thumb img'
   );
 
   zoomTargets.forEach(img => {

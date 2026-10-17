@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wastemancer | Mateusz Szwarc Portfolio</title>
-  <meta name="description" content="Wastemancer game design case study: VFX graph elemental magic, level design blockout, and narrative design by Mateusz Szwarc." />
+  <meta name="description" content="Wastemancer game design case study: Unity VFX Graph elemental magic, arena blockout, and score attack systems by Mateusz Szwarc." />
 
   <!-- Fonts & Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,11 +15,10 @@
   <link rel="icon" type="image/png" href="assets/icons/Unrealicon.png" />
 </head>
 <body>
-  <!-- Ambient Interactive Canvas Background -->
   <canvas id="bg-canvas"></canvas>
   <div class="vignette-overlay"></div>
 
-  <!-- Navigation Header -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="https://matiszwarc.github.io/Portfolio/" class="brand-block">
@@ -48,199 +47,183 @@
     </div>
   </header>
 
-  <main class="case-study-main">
-    <article class="container case-study-header">
-      <a href="https://matiszwarc.github.io/Portfolio/#projects" class="back-link">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <line x1="19" y1="12" x2="5" y2="12"></line>
-          <polyline points="12 19 5 12 12 5"></polyline>
-        </svg>
-        <span>Back to Projects</span>
-      </a>
+  <main>
+    <!-- SCREEN 1: Interactive Magic Video Player on Left, Specs & Info on Right (No Scroll Needed) -->
+    <section class="subpage-screen-1">
+      <div class="container">
+        <div class="subpage-nav-bar">
+          <a href="https://matiszwarc.github.io/Portfolio/#projects" class="back-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span>Back to Projects</span>
+          </a>
 
-      <div class="case-study-hero-row">
-        <div class="case-study-title-block">
-          <h1 class="case-study-title">Wastemancer</h1>
-          <span class="engine-pill">
-            <img src="assets/icons/Unityicon.png" alt="Unity" />
-            <span>Unity</span>
-          </span>
+          <a href="https://futuregames.itch.io/wastemancer" target="_blank" rel="noopener noreferrer" class="btn-itch-page">
+            <img src="assets/icons/Itchioicon.png" alt="itch.io" />
+            <span>Play on itch.io</span>
+          </a>
         </div>
 
-        <a href="https://futuregames.itch.io/wastemancer" target="_blank" rel="noopener noreferrer" class="btn-case-study" style="max-width: 200px;">
-          <span>Play on itch.io</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left: 6px; vertical-align: middle;">
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-            <polyline points="15 3 21 3 21 9"></polyline>
-            <line x1="10" y1="14" x2="21" y2="3"></line>
-          </svg>
-        </a>
+        <div class="subpage-split-hero">
+          <!-- Left: Elemental Magic Video Player (Scaled Down) -->
+          <div class="subpage-media-col" id="magic-player">
+            <!-- Icon Selector Row -->
+            <div class="subpage-magic-selector">
+              <button class="subpage-magic-btn active magic-icon-btn" data-type="heal" title="Heal Magic">
+                <img src="assets/images/Wastemancer/healicon.png" alt="Heal" />
+                <span>Heal</span>
+              </button>
+              <button class="subpage-magic-btn magic-icon-btn" data-type="fire" title="Fire Magic">
+                <img src="assets/images/Wastemancer/fireicon.png" alt="Fire" />
+                <span>Fire</span>
+              </button>
+              <button class="subpage-magic-btn magic-icon-btn" data-type="water" title="Water Magic">
+                <img src="assets/images/Wastemancer/watericon.png" alt="Water" />
+                <span>Water</span>
+              </button>
+              <button class="subpage-magic-btn magic-icon-btn" data-type="earth" title="Earth Magic">
+                <img src="assets/images/Wastemancer/earthicon.png" alt="Earth" />
+                <span>Earth</span>
+              </button>
+              <button class="subpage-magic-btn magic-icon-btn" data-type="wind" title="Wind Magic">
+                <img src="assets/images/Wastemancer/windicon.png" alt="Wind" />
+                <span>Wind</span>
+              </button>
+            </div>
+
+            <!-- Video Player Frame -->
+            <div class="subpage-media-frame">
+              <video id="magic-video" src="assets/images/Wastemancer/healmovie.mp4" controls autoplay loop muted playsinline></video>
+            </div>
+            <p id="magic-caption" class="magic-video-caption">
+              <strong>Heal Magic</strong> — Tactile healing visual aura with custom swirling particles.
+            </p>
+          </div>
+
+          <!-- Right: Title, Engine, Specs (Duration, Team Size, Platform), Roles -->
+          <div class="subpage-info-col">
+            <div class="subpage-title-row">
+              <h1 class="subpage-title">Wastemancer</h1>
+              <span class="engine-pill">
+                <img src="assets/icons/Unityicon.png" alt="Unity" />
+                <span>Unity</span>
+              </span>
+            </div>
+
+            <p class="subpage-tagline">Fast-paced magical arcade action game</p>
+
+            <!-- Specs Grid (Engine, Duration, Team Size, Platform) -->
+            <div class="subpage-specs-grid">
+              <div class="spec-tile">
+                <div class="spec-tile-label">Engine</div>
+                <div class="spec-tile-value">Unity</div>
+              </div>
+              <div class="spec-tile">
+                <div class="spec-tile-label">Duration</div>
+                <div class="spec-tile-value">1 Month</div>
+              </div>
+              <div class="spec-tile">
+                <div class="spec-tile-label">Team Size</div>
+                <div class="spec-tile-value">11 Developers</div>
+              </div>
+              <div class="spec-tile">
+                <div class="spec-tile-label">Platform</div>
+                <div class="spec-tile-value">PC / Console</div>
+              </div>
+            </div>
+
+            <div class="subpage-roles-row">
+              <span class="subpage-role-pill">Narrative, Level Designer</span>
+              <span class="subpage-role-pill">VFX</span>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <p class="case-study-tagline">Fast-paced magical arcade action game</p>
+    <!-- SCREEN 2: Roles, Design Pillars + Systems, Bottom Pictures on Horizontal Line -->
+    <section class="subpage-screen-2">
+      <div class="container">
+        <!-- Design Pillars + Systems Grid -->
+        <div class="screen-2-grid">
+          <!-- Design Pillars Card -->
+          <div class="pillar-system-card">
+            <h2 class="pillar-system-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 8v8"></path>
+                <path d="M8 12h8"></path>
+              </svg>
+              <span>Design Pillars</span>
+            </h2>
+            <ul class="pillar-system-list">
+              <li>Fast paced gameplay.</li>
+              <li>Easy to learn, hard to master.</li>
+              <li>Achieve the highest score possible.</li>
+            </ul>
+          </div>
 
-      <!-- Quick Specs -->
-      <div class="case-study-stats-grid">
-        <div class="stat-card">
-          <div class="stat-label">Engine</div>
-          <div class="stat-value">Unity</div>
+          <!-- Systems Card -->
+          <div class="pillar-system-card">
+            <h2 class="pillar-system-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+              <span>Systems</span>
+            </h2>
+            <ul class="pillar-system-list">
+              <li>Imput combination.</li>
+              <li>Random enemy spawn.</li>
+              <li>Attack combination and cooldown.</li>
+              <li>Score based system.</li>
+            </ul>
+          </div>
         </div>
-        <div class="stat-card">
-          <div class="stat-label">Duration</div>
-          <div class="stat-value">1 Month</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-label">Team Size</div>
-          <div class="stat-value">11 Developers</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-label">Platform</div>
-          <div class="stat-value">PC / Console</div>
+
+        <!-- Bottom Pictures Lane (At least 3 in horizontal line, 3-5 word notes) -->
+        <div class="subpage-pictures-lane">
+          <h3 class="pictures-lane-header">Level Design &amp; Arena Progression (Lvl 01 – 04)</h3>
+          <div class="pictures-lane-grid" style="grid-template-columns: repeat(4, 1fr);">
+            <div class="picture-lane-card">
+              <div class="picture-lane-thumb">
+                <img src="assets/images/Wastemancer/Lvl01.png" alt="Stage 01: Arena blockout" />
+              </div>
+              <div class="picture-lane-note">Stage 01: Arena blockout</div>
+            </div>
+
+            <div class="picture-lane-card">
+              <div class="picture-lane-thumb">
+                <img src="assets/images/Wastemancer/Lvl02.png" alt="Stage 02: Navigation geometry" />
+              </div>
+              <div class="picture-lane-note">Stage 02: Navigation geometry</div>
+            </div>
+
+            <div class="picture-lane-card">
+              <div class="picture-lane-thumb">
+                <img src="assets/images/Wastemancer/Lvl03.png" alt="Stage 03: Environment dressing" />
+              </div>
+              <div class="picture-lane-note">Stage 03: Environment dressing</div>
+            </div>
+
+            <div class="picture-lane-card">
+              <div class="picture-lane-thumb">
+                <img src="assets/images/Wastemancer/Lvl04.png" alt="Stage 04: Lighting and post-processing" />
+              </div>
+              <div class="picture-lane-note">Stage 04: Lighting &amp; post-processing</div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Gameplay Banner -->
-      <div class="case-study-banner-wrap">
-        <img src="assets/images/Wastemancer.gif" alt="Wastemancer Gameplay" />
-      </div>
-
-      <!-- Overview & Roles -->
-      <section class="case-study-section">
-        <h2 class="case-study-sec-title">Overview &amp; Roles</h2>
-        <div class="roles-pills-row">
-          <span class="role-pill">Narrative Design</span>
-          <span class="role-pill">Level Design</span>
-          <span class="role-pill">VFX Art</span>
-        </div>
-        <p class="case-study-p">
-          Wastemancer is an arcade action game designed to be easy to learn but hard to master, letting players jump straight into satisfying magical combat against relentless hordes of trash-monsters.
-        </p>
-        <ul class="case-study-list">
-          <li><strong>VFX Art:</strong> Created custom textures and meshes in Photoshop and Blender, built shaders, and programmed dynamic particle behaviors in Unity VFX Graph.</li>
-          <li><strong>5 Magic Types:</strong> Designed Fire, Wind, Earth, Water, and Heal with reactive feedback and positioning-dependent mechanics.</li>
-          <li><strong>Level Design:</strong> Crafted combat arena from paper concept through graybox blockout, lighting, camera setup, and post-processing.</li>
-          <li><strong>Narrative Worldbuilding:</strong> Defined character lore, world consistency, and why enemies manifest as animated scrap.</li>
-        </ul>
-      </section>
-
-      <!-- Interactive Elemental Magic VFX Player -->
-      <section class="case-study-section">
-        <h2 class="case-study-sec-title">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-          </svg>
-          Elemental Magic VFX Breakdown
-        </h2>
-        <p class="case-study-p">
-          I was responsible for creating textures and meshes using Photoshop and Blender. Depending on the effect, I made custom shaders and programmed them in the VFX Graph. We implemented 5 elemental types of magic: <strong>Heal, Fire, Water, Earth, and Wind</strong>. Click any elemental spell icon below to view its in-game VFX demonstration:
-        </p>
-
-        <!-- Interactive Player Box -->
-        <div id="magic-player" class="magic-player-box">
-          <div class="magic-icon-selector">
-            <button class="magic-icon-btn active" data-type="heal" title="Heal Magic">
-              <img src="assets/images/Wastemancer/healicon.png" alt="Heal Magic Icon" />
-              <span>Heal</span>
-            </button>
-            <button class="magic-icon-btn" data-type="fire" title="Fire Magic">
-              <img src="assets/images/Wastemancer/fireicon.png" alt="Fire Magic Icon" />
-              <span>Fire</span>
-            </button>
-            <button class="magic-icon-btn" data-type="water" title="Water Magic">
-              <img src="assets/images/Wastemancer/watericon.png" alt="Water Magic Icon" />
-              <span>Water</span>
-            </button>
-            <button class="magic-icon-btn" data-type="earth" title="Earth Magic">
-              <img src="assets/images/Wastemancer/earthicon.png" alt="Earth Magic Icon" />
-              <span>Earth</span>
-            </button>
-            <button class="magic-icon-btn" data-type="wind" title="Wind Magic">
-              <img src="assets/images/Wastemancer/windicon.png" alt="Wind Magic Icon" />
-              <span>Wind</span>
-            </button>
-          </div>
-
-          <div class="magic-video-container">
-            <video id="magic-video" src="assets/images/Wastemancer/healmovie.mp4" controls autoplay loop muted playsinline></video>
-          </div>
-          <p id="magic-caption" class="magic-video-caption">
-            <strong>Heal Magic</strong> — Tactile healing visual aura with custom swirling particles and glowing restorative feedback.
-          </p>
-        </div>
-      </section>
-
-      <!-- Level Design Section with 4 pictures Lvl01 - Lvl04 -->
-      <section class="case-study-section">
-        <h2 class="case-study-sec-title">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-            <circle cx="8.5" cy="8.5" r="1.5"></circle>
-            <polyline points="21 15 16 10 5 21"></polyline>
-          </svg>
-          Level Design &amp; Arena Graybox (Lvl 01 – 04)
-        </h2>
-        <p class="case-study-p">
-          Due to the project's rapid one-month development timeframe, we focused on crafting a single polished combat arena. I drafted the initial layout on paper, blocked out geometry in 3D, and closely collaborated with artists to populate props and sightlines. Once the blockout was validated in playtests, I completed the scene setup with dynamic lighting, camera angle tuning, and post-processing volumes. <em>(Click any image to inspect in full resolution)</em>:
-        </p>
-
-        <div class="gallery-grid-4">
-          <div class="gallery-card">
-            <div class="gallery-img-wrap">
-              <img src="assets/images/Wastemancer/Lvl01.png" alt="Level Design Stage 01 - Initial Layout & Graybox Blockout" class="zoomable-img" />
-            </div>
-            <div class="gallery-card-body">
-              <div class="gallery-card-title">Stage 01 — Arena Blockout</div>
-              <div class="gallery-card-desc">Establishing scale, collision barriers, and central combat clearing.</div>
-            </div>
-          </div>
-
-          <div class="gallery-card">
-            <div class="gallery-img-wrap">
-              <img src="assets/images/Wastemancer/Lvl02.png" alt="Level Design Stage 02 - Geometry & Navigation" class="zoomable-img" />
-            </div>
-            <div class="gallery-card-body">
-              <div class="gallery-card-title">Stage 02 — Geometry &amp; Flow</div>
-              <div class="gallery-card-desc">Defining player kiting paths and spawner perimeter distances.</div>
-            </div>
-          </div>
-
-          <div class="gallery-card">
-            <div class="gallery-img-wrap">
-              <img src="assets/images/Wastemancer/Lvl03.png" alt="Level Design Stage 03 - Art Pass & Environment Dressing" class="zoomable-img" />
-            </div>
-            <div class="gallery-card-body">
-              <div class="gallery-card-title">Stage 03 — Environment Dressing</div>
-              <div class="gallery-card-desc">Populating thematic trash assets and modular props with 3D artists.</div>
-            </div>
-          </div>
-
-          <div class="gallery-card">
-            <div class="gallery-img-wrap">
-              <img src="assets/images/Wastemancer/Lvl04.png" alt="Level Design Stage 04 - Lighting, Camera & Final Post-Processing" class="zoomable-img" />
-            </div>
-            <div class="gallery-card-body">
-              <div class="gallery-card-title">Stage 04 — Lighting &amp; Post-Processing</div>
-              <div class="gallery-card-desc">Color grading, focal contrast, and mood lighting to enhance readability.</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Narrative Design Section -->
-      <section class="case-study-section">
-        <h2 class="case-study-sec-title">Narrative Design</h2>
-        <p class="case-study-p">
-          The narrative role in Wastemancer was crucial to bridge disparate gameplay concepts into a cohesive thematic whole. I anchored the explanation of why characters cast magic in a wasteland, why environmental debris comes to life as aggressive monsters, and who our protagonist is. This narrative clarity energized our art team and ensured every visual element reinforced our world logic.
-        </p>
-      </section>
-    </article>
+    </section>
   </main>
 
   <!-- Site Footer with FutureGames Logo on Bottom Right Corner -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-left">
-        <p>© Mateusz Szwarc — Game Designer &amp; Technical Artist</p>
+        <p>© Mateusz Szwarc — Game Designer</p>
       </div>
       <div class="footer-right">
         <a href="https://futuregames.se" target="_blank" rel="noopener noreferrer" class="futuregames-link" title="Futuregames">
