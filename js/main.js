@@ -1,6 +1,6 @@
 /**
  * Game Portfolio Website - Main Controller
- * Adapted to match Mateusz Szwarc Wix Studio Portfolio
+ * Adapted to match Mateusz Szwarc Portfolio
  */
 
 import { projects, bioData } from './projects-data.js';
@@ -15,8 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   renderProjects('all');
   initProjectFilters();
-  initProjectModal();
-  initCopyEmail();
 });
 
 /* ==========================================================================
@@ -28,6 +26,7 @@ function initNavigation() {
   const sections = document.querySelectorAll('section[id]');
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
   const navMenu = document.querySelector('.nav-links');
+  const brandBlock = document.querySelector('.brand-block');
 
   // Sticky header shadow on scroll
   window.addEventListener('scroll', () => {
@@ -66,15 +65,44 @@ function initNavigation() {
     });
   }
 
+  // Home link & brand block behavior (avoid adding #hero to URL)
+  function handleHomeClick(e) {
+    const isCurrentPageHome = window.location.pathname.endsWith('index.html') || 
+                              window.location.pathname.endsWith('/') || 
+                              window.location.pathname === '' ||
+                              window.location.pathname.includes('/Portfolio/');
+    
+    // If we are already on home page, smoothly scroll to top without adding #hero
+    if (document.getElementById('hero')) {
+      e.preventDefault();
+      sfx.click();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Replace URL state to clean portfolio root without #hero
+      if (window.history.pushState) {
+        window.history.pushState(null, '', 'https://matiszwarc.github.io/Portfolio/');
+      }
+    }
+  }
+
+  if (brandBlock) {
+    brandBlock.addEventListener('click', handleHomeClick);
+  }
+
+  const homeNavLink = document.querySelector('a.nav-link[data-nav="home"]');
+  if (homeNavLink) {
+    homeNavLink.addEventListener('click', handleHomeClick);
+  }
+
   // Active link highlighter via IntersectionObserver
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute('id');
         navLinks.forEach(link => {
-          if (link.getAttribute('href') === `#${id}`) {
+          const href = link.getAttribute('href');
+          if (href === `#${id}` || (id === 'hero' && link.getAttribute('data-nav') === 'home')) {
             link.classList.add('active');
-          } else {
+          } else if (href && href.startsWith('#')) {
             link.classList.remove('active');
           }
         });
@@ -91,33 +119,7 @@ function initNavigation() {
 }
 
 /* ==========================================================================
-   SFX Button Controls
-   ========================================================================== */
-function initSFXControls() {
-  const sfxBtn = document.getElementById('sfx-toggle');
-  const sfxStatus = document.getElementById('sfx-status');
-  if (!sfxBtn) return;
-
-  function updateBtnUI(isUnmuted) {
-    if (isUnmuted) {
-      sfxBtn.classList.add('active');
-      if (sfxStatus) sfxStatus.textContent = 'ON';
-    } else {
-      sfxBtn.classList.remove('active');
-      if (sfxStatus) sfxStatus.textContent = 'MUTED';
-    }
-  }
-
-  updateBtnUI(!sfx.isMuted());
-
-  sfxBtn.addEventListener('click', () => {
-    const isUnmuted = sfx.toggleMute();
-    updateBtnUI(isUnmuted);
-  });
-}
-
-/* ==========================================================================
-   Projects Rendering (Wix Studio Card Hierarchy)
+   Projects Rendering (3-in-a-row Layout, direct links to game subpages)
    ========================================================================== */
 function renderProjects(categoryFilter = 'all') {
   const grid = document.getElementById('projects-grid');
@@ -134,26 +136,26 @@ function renderProjects(categoryFilter = 'all') {
     card.className = 'wix-card';
 
     card.innerHTML = `
-      <div class="card-media-wrap" data-id="${project.id}" title="Click to view ${project.title} breakdown">
+      <a href="${project.pageUrl}" class="card-media-wrap" title="View ${project.title} breakdown">
         <div class="engine-badge-overlay" title="${project.engine}">
           <img src="${project.engineIcon}" alt="${project.engine} icon" />
         </div>
         <img src="${project.thumbnail}" alt="${project.title} gameplay GIF" loading="lazy" />
-      </div>
+      </a>
       <div class="card-content">
-        <h3 class="card-title">${project.title}</h3>
+        <h3 class="card-title">
+          <a href="${project.pageUrl}" class="card-title-link">${project.title}</a>
+        </h3>
         <p class="card-meta-line">${project.metaLine1}</p>
         <p class="card-meta-line">${project.metaLine2}</p>
         <p class="card-meta-line roles">${project.metaLine3}</p>
         <div class="card-actions">
-          <button class="btn-case-study view-details-btn" data-id="${project.id}">
+          <a href="${project.pageUrl}" class="btn-case-study">
             View Breakdown
-          </button>
+          </a>
           ${project.itchUrl ? `
             <a href="${project.itchUrl}" target="_blank" rel="noopener noreferrer" class="btn-itch-direct" title="Play on Itch.io" aria-label="Play on Itch.io">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M2.5 4v16h19V4H2.5zm2.85 2h13.3c.75.95 1.85 2.37 1.85 2.37V10H3.5V8.37S4.6 6.95 5.35 6zm2.65 6a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm8 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/>
-              </svg>
+              <img src="assets/icons/Itchioicon.png" alt="itch.io" width="18" height="18" />
             </a>
           ` : ''}
         </div>
@@ -163,25 +165,10 @@ function renderProjects(categoryFilter = 'all') {
     grid.appendChild(card);
   });
 
-  // Attach click listeners to cards and buttons
-  const detailButtons = grid.querySelectorAll('.view-details-btn');
-  detailButtons.forEach(btn => {
-    btn.addEventListener('mouseenter', () => sfx.hover());
-    btn.addEventListener('click', (e) => {
-      sfx.modalOpen();
-      const projId = e.currentTarget.getAttribute('data-id');
-      openProjectModal(projId);
-    });
-  });
-
-  const mediaWraps = grid.querySelectorAll('.card-media-wrap');
-  mediaWraps.forEach(wrap => {
-    wrap.addEventListener('mouseenter', () => sfx.hover());
-    wrap.addEventListener('click', (e) => {
-      sfx.modalOpen();
-      const projId = e.currentTarget.getAttribute('data-id');
-      openProjectModal(projId);
-    });
+  // Sound effects on hover
+  const interactiveLinks = grid.querySelectorAll('.btn-case-study, .card-media-wrap, .btn-itch-direct, .card-title-link');
+  interactiveLinks.forEach(elem => {
+    elem.addEventListener('mouseenter', () => sfx.hover());
   });
 }
 
@@ -197,154 +184,4 @@ function initProjectFilters() {
       renderProjects(filter);
     });
   });
-}
-
-/* ==========================================================================
-   Project Detail Lightbox / Modal
-   ========================================================================== */
-function initProjectModal() {
-  const modalBackdrop = document.getElementById('project-modal');
-  const closeBtn = document.getElementById('modal-close');
-
-  if (!modalBackdrop) return;
-
-  function closeModal() {
-    sfx.modalClose();
-    modalBackdrop.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeModal);
-  }
-
-  modalBackdrop.addEventListener('click', (e) => {
-    if (e.target === modalBackdrop) {
-      closeModal();
-    }
-  });
-
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modalBackdrop.classList.contains('open')) {
-      closeModal();
-    }
-  });
-}
-
-function openProjectModal(projectId) {
-  const project = projects.find(p => p.id === projectId);
-  if (!project) return;
-
-  const modalBackdrop = document.getElementById('project-modal');
-  const modalTitle = document.getElementById('modal-title');
-  const modalBanner = document.getElementById('modal-banner');
-  const modalStats = document.getElementById('modal-stats');
-  const modalSummary = document.getElementById('modal-summary');
-  const modalRoles = document.getElementById('modal-roles');
-  const modalHighlights = document.getElementById('modal-highlights');
-  const modalPlaySlot = document.getElementById('modal-play-slot');
-
-  if (modalTitle) modalTitle.textContent = project.title;
-  if (modalBanner) modalBanner.src = project.thumbnail;
-
-  // Itch Play Button
-  if (modalPlaySlot) {
-    if (project.itchUrl) {
-      modalPlaySlot.innerHTML = `
-        <a href="${project.itchUrl}" target="_blank" rel="noopener noreferrer" class="modal-play-btn">
-          <span>Play on itch.io</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M2.5 4v16h19V4H2.5zm2.85 2h13.3c.75.95 1.85 2.37 1.85 2.37V10H3.5V8.37S4.6 6.95 5.35 6zm2.65 6a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm8 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/>
-          </svg>
-        </a>
-      `;
-    } else {
-      modalPlaySlot.innerHTML = '';
-    }
-  }
-
-  // Quick specs
-  if (modalStats && project.quickStats) {
-    modalStats.innerHTML = project.quickStats.map(s => `
-      <div class="modal-meta-item">
-        <strong>${s.label}:</strong> ${s.value}
-      </div>
-    `).join('');
-  }
-
-  // Summary
-  if (modalSummary) {
-    modalSummary.textContent = project.summary;
-  }
-
-  // Roles
-  if (modalRoles && project.myRoles) {
-    modalRoles.innerHTML = project.myRoles.map(r => `
-      <li>${r}</li>
-    `).join('');
-  }
-
-  // Highlights & Systems
-  if (modalHighlights && project.highlights) {
-    modalHighlights.innerHTML = project.highlights.map(h => `
-      <li>${h}</li>
-    `).join('');
-  }
-
-  // Detailed Wix Sections (Balancing, Level Design, Systems, VFX Art, Narrative)
-  const modalDetailed = document.getElementById('modal-detailed-sections');
-  if (modalDetailed) {
-    if (project.detailedSections && project.detailedSections.length > 0) {
-      modalDetailed.innerHTML = project.detailedSections.map(sec => `
-        <h3 class="modal-sec-title">${sec.title}</h3>
-        <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.96rem; white-space: pre-line; margin-bottom: 1.25rem;">
-          ${sec.content}
-        </p>
-      `).join('');
-    } else {
-      modalDetailed.innerHTML = '';
-    }
-  }
-
-  modalBackdrop.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-/* ==========================================================================
-   Copy Email & Toast Feedback
-   ========================================================================== */
-function initCopyEmail() {
-  const copyBtn = document.getElementById('copy-email-btn');
-  if (!copyBtn) return;
-
-  copyBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    sfx.click();
-    const email = bioData.email;
-    navigator.clipboard.writeText(email).then(() => {
-      showToast(`Copied ${email} to clipboard!`);
-    }).catch(() => {
-      showToast(`Contact: ${email}`);
-    });
-  });
-}
-
-function showToast(msg) {
-  let toast = document.querySelector('.toast-notice');
-  if (!toast) {
-    toast = document.createElement('div');
-    toast.className = 'toast-notice';
-    document.body.appendChild(toast);
-  }
-  toast.innerHTML = `
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-      <polyline points="22 4 12 14.01 9 11.01"></polyline>
-    </svg>
-    <span>${msg}</span>
-  `;
-  toast.classList.add('show');
-  setTimeout(() => {
-    toast.classList.remove('show');
-  }, 3200);
 }

@@ -1,58 +1,19 @@
 /**
  * Game Portfolio - Projects Data
- * Real project catalog for Mateusz Szwarc (matiszwarc.wixstudio.com/portfolio)
+ * Real project catalog for Mateusz Szwarc
  */
 
 export const projects = [
   {
-    id: "catsmith",
-    title: "Catsmith",
-    tagline: "Local co-op crafting game | Management | Multiplayer",
-    category: "unity", // User requested: Catsmith to unity tab
-    engine: "Unity",
-    engineIcon: "assets/icons/unity-white.svg",
-    thumbnail: "assets/images/Catsmith.gif",
-    metaLine1: "| Management | Multiplayer |",
-    metaLine2: "| Two month | PC | Team Size: 11 |",
-    metaLine3: "| PO | Lead Designer | VFX | AI Programmer |",
-    itchUrl: "https://futuregames.itch.io/catsmith",
-    quickStats: [
-      { label: "Engine", value: "Unity" },
-      { label: "Duration", value: "2 Months" },
-      { label: "Team Size", value: "11 Developers" },
-      { label: "Platform", value: "PC" }
-    ],
-    summary: "Catsmith is a local co-op crafting game. Work together to manage a bustling forge, fulfill customer commissions, and master the rhythm of crafting through communication, coordination, and teamwork.",
-    myRoles: [
-      "Product Owner",
-      "VFX Artist",
-      "Lead Designer",
-      "AI Programmer",
-      "Level Design"
-    ],
-    highlights: [
-      "Local multiplayer cooperative gameplay loop.",
-      "Fast-paced minigames different from each other.",
-      "Order management system.",
-      "Particle system for responsive visual feedback.",
-      "Two different AI state trees for Customers and Master."
-    ],
-    detailedSections: [
-      {
-        title: "Systems",
-        content: "- local multiplayer\n- fast paced minigames different from each other\n- Order management\n- Particle system for visual feedback\n- Two different AI state trees for Customers and Master"
-      }
-    ]
-  },
-  {
     id: "overbrewed",
     title: "Overbrewed",
     tagline: "Magic shop simulator | Multiplayer",
-    category: "unreal", // User requested: Overbrewed to unreal tab
+    category: "unreal",
     engine: "Unreal Engine 5",
-    engineIcon: "assets/icons/ue-white.svg",
+    engineIcon: "assets/icons/Unrealicon.png",
     thumbnail: "assets/images/Overbrewed.gif",
-    metaLine1: "| magic shop simulator | Multiplayer |",
+    pageUrl: "overbrewed.html",
+    metaLine1: "| Magic shop simulator | Multiplayer |",
     metaLine2: "| Two month | PC | Team Size: 12 |",
     metaLine3: "| System Designer | VFX |",
     itchUrl: "",
@@ -81,48 +42,135 @@ export const projects = [
     ]
   },
   {
-    id: "domefall",
-    title: "Domefall",
-    tagline: "Mobile tower defense with in-game upgrade progression",
-    category: "unity", // User requested: Domefall to unity tab
-    engine: "Unity",
-    engineIcon: "assets/icons/unity-white.svg",
-    thumbnail: "assets/images/Domefall.gif",
-    metaLine1: "| Tower Defense |",
-    metaLine2: "| One month | mobile | Team Size: 10 |",
-    metaLine3: "| VFX | Level Designer | Difficulty Scale |",
-    itchUrl: "https://futuregames.itch.io/domefall",
+    id: "catsmith",
+    title: "Catsmith",
+    tagline: "Local co-op crafting game | Management | Multiplayer",
+    category: "unreal",
+    engine: "Unreal Engine 5",
+    engineIcon: "assets/icons/Unrealicon.png",
+    thumbnail: "assets/images/Catsmith.gif",
+    pageUrl: "catsmith.html",
+    metaLine1: "| Management | Multiplayer |",
+    metaLine2: "| Two month | PC | Team Size: 11 |",
+    metaLine3: "| PO | Lead Designer | VFX | AI Programmer |",
+    itchUrl: "https://futuregames.itch.io/catsmith",
     quickStats: [
-      { label: "Engine", value: "Unity" },
-      { label: "Duration", value: "1 Month" },
-      { label: "Team Size", value: "10 Developers" },
-      { label: "Platform", value: "Mobile" }
+      { label: "Engine", value: "Unreal Engine 5" },
+      { label: "Duration", value: "2 Months" },
+      { label: "Team Size", value: "11 Developers" },
+      { label: "Platform", value: "PC" }
     ],
-    summary: "A tower defense with an upgrade system during gameplay, where each defeat allows player to gain more upgrades and progress further.",
+    summary: "Catsmith is a local co-op crafting game. Work together to manage a bustling forge, fulfill customer commissions, and master the rhythm of crafting through communication, coordination, and teamwork.",
     myRoles: [
-      "Balancing",
-      "Level Design",
-      "System Design",
-      "VFX"
+      "Product Owner",
+      "VFX Artist",
+      "Lead Designer",
+      "AI Programmer",
+      "Level Design"
     ],
     highlights: [
-      "Balancing: During development, answered key design questions: How many enemies per wave? How many hits to kill an enemy? What type should enemy be? How much gold should the player have? How should difficulty increase during playtime?",
-      "Constructed balancing system so it allows us to easily add more levels and introduce three different difficulties in future versions.",
-      "Level Design: Constructed and balanced enemy paths from spawners on different sides of the map, varying travel time and enemy types to create unique level feels.",
-      "System Design: Dual progression system based on both temporary in-run upgrades and permanent evolution points earned upon death to customize tower skill trees."
+      "Local multiplayer cooperative gameplay loop.",
+      "Fast-paced minigames different from each other.",
+      "Order management system.",
+      "Particle system for responsive visual feedback.",
+      "Two different AI state trees for Customers and Master."
     ],
     detailedSections: [
       {
-        title: "Balancing",
-        content: "During the development process, simple ideas multiplied a lot into a nightmare of numbers. How many enemies per wave? How many hits does the player tower require to kill the enemy? What type should enemy be? How much gold should the player have during game? How should the difficulty increase during playtime? These questions were answered after hours of balancing and going through numbers, adjusting values to fit the game system. The system is constructed in a way that allows us to easily add more levels and introduce three different difficulties in the future version."
+        title: "Systems",
+        content: "- local multiplayer\n- fast paced minigames different from each other\n- Order management\n- Particle system for visual feedback\n- Two different AI state trees for Customers and Master"
+      }
+    ]
+  },
+  {
+    id: "prism-of-darkness",
+    title: "Prism of Darkness",
+    tagline: "Turn-based combat | Fantasy",
+    category: "unreal",
+    engine: "Unreal Engine 5",
+    engineIcon: "assets/icons/Unrealicon.png",
+    thumbnail: "assets/images/PrismOfDarkness.png",
+    pageUrl: "prism-of-darkness.html",
+    metaLine1: "| Turn Based Combat | Fantasy |",
+    metaLine2: "| One month | PC | Team Size: 8 |",
+    metaLine3: "| System Designer | Animation Implementation | UI programming |",
+    itchUrl: "",
+    isSoon: true,
+    quickStats: [
+      { label: "Engine", value: "Unreal Engine 5" },
+      { label: "Duration", value: "1 Month" },
+      { label: "Team Size", value: "8 Developers" },
+      { label: "Platform", value: "PC" }
+    ],
+    summary: "An upcoming tactical fantasy turn-based combat game developed in Unreal Engine 5. Strategic ability timing, dynamic character animations, and intuitive tactical interface.",
+    myRoles: [
+      "System Designer",
+      "Animation Implementation",
+      "UI Programming"
+    ],
+    highlights: [
+      "System Designer: Formulating tactical turn-based combat systems, ability interactions, and action economy.",
+      "Animation Implementation: Implementing responsive animation state trees, combat montages, and hit-reaction feedback in Unreal Engine 5.",
+      "UI Programming: Designing and programming tactical combat interfaces, turn-order trackers, and ability selection HUDs."
+    ],
+    detailedSections: [
+      {
+        title: "Systems & Combat Design",
+        content: "Designed tactical turn-based combat mechanics focusing on positioning, timing, and synergy between character skills in a dark fantasy setting."
+      },
+      {
+        title: "Animation & Gameplay Integration",
+        content: "Implemented fluid character combat animations and state trees to ensure every attack and ability cast feels impactful and responsive."
+      },
+      {
+        title: "UI Programming",
+        content: "Built clean and readable combat UI widgets for turn order, player status, and ability selection to streamline player decision-making."
+      }
+    ]
+  },
+  {
+    id: "wastemancer",
+    title: "Wastemancer",
+    tagline: "Fast-paced magical arcade action game",
+    category: "unity",
+    engine: "Unity",
+    engineIcon: "assets/icons/Unityicon.png",
+    thumbnail: "assets/images/Wastemancer.gif",
+    pageUrl: "wastemancer.html",
+    metaLine1: "| Fast Paced | Arcade game |",
+    metaLine2: "| One month | PC / Console | Team Size: 11 |",
+    metaLine3: "| Narrative/Level Designer | VFX |",
+    itchUrl: "https://futuregames.itch.io/wastemancer",
+    quickStats: [
+      { label: "Engine", value: "Unity" },
+      { label: "Duration", value: "1 Month" },
+      { label: "Team Size", value: "11 Developers" },
+      { label: "Platform", value: "PC / Console" }
+    ],
+    summary: "An arcade game that's easy to learn but hard to master, designed for people to jump in and enjoy.",
+    myRoles: [
+      "Narrative Design",
+      "Level Design",
+      "VFX Art"
+    ],
+    highlights: [
+      "VFX Art: Created textures and meshes in Photoshop & Blender, built shaders, and programmed them in the VFX Graph.",
+      "Designed 5 magic types: Fire, Wind, Earth, Water, and Heal. Collaborated with programmers so Earth and Water attacks count depending on enemy position.",
+      "Narrative Design: Explained the combat system, why the world looks the same despite magic, and why monsters are encountered as trash, boosting team creativity.",
+      "Level Design: Designed the combat arena on paper, built the blockout, populated the area with artists, set up lighting, tweaked camera, and tuned post-processing."
+    ],
+    detailedSections: [
+      {
+        title: "VFX Art",
+        content: "I was responsible for creating various textures and meshes using Photoshop and Blender. Depending on the effect, I also made shaders and programmed them in the VFX graph. That was my main task after I completed the narrative part of the game. I asked programmers to help me with the earth attack and water to make it count depending on where the enemy is. In game, we have 5 different types of magic: Fire, Wind, Earth, Water, and Heal. And who doesn't like shiny, dynamic, explosive visual effects on screen? It makes the game so much better."
+      },
+      {
+        title: "Narrative Design",
+        content: "The narrative part of the game needed to explain all the ideas we developed: magic-related combat system, why the world looks the same despite access to magic, and why we encounter monsters as trash. Making narration boosted the creativity of our artists, defining who our character is with features that define him."
       },
       {
         title: "Level Design",
-        content: "Level Design and balancing are connected to the game, since the game has spawners with enemies. Placing them on different sides of the map and then constructing and balancing a path towards the main objective for the enemies was a task I took. With different amounts of spawners, travel time, and types of enemies coming from each, I was able to create levels that feel different for the player."
-      },
-      {
-        title: "System Design",
-        content: "The game system includes the main tower, and additional ones used by AI to defeat enemies. The progression system is based on both temporary upgrades and permanent ones. Each time a player dies, they get evolution points depending on how far they progressed. These points are used in the skill tree. Every tower has a different skill tree that also includes paths that completely change how the tower behaves. In the worst-case scenario, the player can choose to spend points to rearrange the skill tree for their needs."
+        content: "We wanted to include one area for the player to fight because of the development timeframe. For this demo, I presented the idea on paper, how the main screen could look, and then created a blockout. After that, I closely cooperated with artists deciding how to populate the area and what feeling the player should get. When everything was in place, I made a setup with lighting, tweaked the camera, and applied post-processing effects."
       }
     ]
   },
@@ -130,11 +178,12 @@ export const projects = [
     id: "necromeowcy",
     title: "Necromeowcy",
     tagline: "Necromancer simulator with town management | 1-week game jam",
-    category: "unity", // User requested: Necromeowcy to unity tab
+    category: "unity",
     engine: "Unity",
-    engineIcon: "assets/icons/unity-white.svg",
+    engineIcon: "assets/icons/Unityicon.png",
     thumbnail: "assets/images/Necromeowcy.gif",
-    metaLine1: "| Strategy | management |",
+    pageUrl: "necromeowcy.html",
+    metaLine1: "| Strategy | Management |",
     metaLine2: "| One week | PC | Team Size: 9 |",
     metaLine3: "| VFX | Narrative Designer |",
     itchUrl: "https://untalpanda.itch.io/necromeowcy",
@@ -177,47 +226,49 @@ export const projects = [
     ]
   },
   {
-    id: "wastemancer",
-    title: "Wastemancer",
-    tagline: "Fast-paced magical arcade action game",
-    category: "unity", // User requested: Wastemancer to unity tab
+    id: "domefall",
+    title: "Domefall",
+    tagline: "Mobile tower defense with in-game upgrade progression",
+    category: "unity",
     engine: "Unity",
-    engineIcon: "assets/icons/unity-white.svg",
-    thumbnail: "assets/images/Wastemancer.gif",
-    metaLine1: "| Fast Paced | arcade game |",
-    metaLine2: "| One month | PC / Console | Team Size: 11 |",
-    metaLine3: "| Narrative/Level Designer | VFX |",
-    itchUrl: "https://futuregames.itch.io/wastemancer",
+    engineIcon: "assets/icons/Unityicon.png",
+    thumbnail: "assets/images/Domefall.gif",
+    pageUrl: "domefall.html",
+    metaLine1: "| Tower Defense |",
+    metaLine2: "| One month | Mobile | Team Size: 10 |",
+    metaLine3: "| VFX | Level Designer | Difficulty Scale |",
+    itchUrl: "https://futuregames.itch.io/domefall",
     quickStats: [
       { label: "Engine", value: "Unity" },
       { label: "Duration", value: "1 Month" },
-      { label: "Team Size", value: "11 Developers" },
-      { label: "Platform", value: "PC / Console" }
+      { label: "Team Size", value: "10 Developers" },
+      { label: "Platform", value: "Mobile" }
     ],
-    summary: "An arcade game that's easy to learn but hard to master, designed for people to jump in and enjoy.",
+    summary: "A tower defense with an upgrade system during gameplay, where each defeat allows player to gain more upgrades and progress further.",
     myRoles: [
-      "Narrative Design",
+      "Balancing",
       "Level Design",
-      "VFX Art"
+      "System Design",
+      "VFX"
     ],
     highlights: [
-      "VFX Art: Created textures and meshes in Photoshop & Blender, built shaders, and programmed them in the VFX Graph.",
-      "Designed 5 magic types: Fire, Wind, Earth, Water, and Heal. Collaborated with programmers so Earth and Water attacks count depending on enemy position.",
-      "Narrative Design: Explained the combat system, why the world looks the same despite magic, and why monsters are encountered as trash, boosting team creativity.",
-      "Level Design: Designed the combat arena on paper, built the blockout, populated the area with artists, set up lighting, tweaked camera, and tuned post-processing."
+      "Balancing: During development, answered key design questions: How many enemies per wave? How many hits to kill an enemy? What type should enemy be? How much gold should the player have? How should difficulty increase during playtime?",
+      "Constructed balancing system so it allows us to easily add more levels and introduce three different difficulties in future versions.",
+      "Level Design: Constructed and balanced enemy paths from spawners on different sides of the map, varying travel time and enemy types to create unique level feels.",
+      "System Design: Dual progression system based on both temporary in-run upgrades and permanent evolution points earned upon death to customize tower skill trees."
     ],
     detailedSections: [
       {
-        title: "VFX Art",
-        content: "I was responsible for creating various textures and meshes using Photoshop and Blender. Depending on the effect, I also made shaders and programmed them in the VFX graph. That was my main task after I completed the narrative part of the game. I asked programmers to help me with the earth attack and water to make it count depending on where the enemy is. In game, we have 5 different types of magic: Fire, Wind, Earth, Water, and Heal. And who doesn't like shiny, dynamic, explosive visual effects on screen? It makes the game so much better."
-      },
-      {
-        title: "Narrative Design",
-        content: "The narrative part of the game needed to explain all the ideas we developed: magic-related combat system, why the world looks the same despite access to magic, and why we encounter monsters as trash. Making narration boosted the creativity of our artists, defining who our character is with features that define him."
+        title: "Balancing",
+        content: "During the development process, simple ideas multiplied a lot into a nightmare of numbers. How many enemies per wave? How many hits does the player tower require to kill the enemy? What type should enemy be? How much gold should the player have during game? How should the difficulty increase during playtime? These questions were answered after hours of balancing and going through numbers, adjusting values to fit the game system. The system is constructed in a way that allows us to easily add more levels and introduce three different difficulties in the future version."
       },
       {
         title: "Level Design",
-        content: "We wanted to include one area for the player to fight because of the development timeframe. For this demo, I presented the idea on paper, how the main screen could look, and then created a blockout. After that, I closely cooperated with artists deciding how to populate the area and what feeling the player should get. When everything was in place, I made a setup with lighting, tweaked the camera, and applied post-processing effects."
+        content: "Level Design and balancing are connected to the game, since the game has spawners with enemies. Placing them on different sides of the map and then constructing and balancing a path towards the main objective for the enemies was a task I took. With different amounts of spawners, travel time, and types of enemies coming from each, I was able to create levels that feel different for the player."
+      },
+      {
+        title: "System Design",
+        content: "The game system includes the main tower, and additional ones used by AI to defeat enemies. The progression system is based on both temporary upgrades and permanent ones. Each time a player dies, they get evolution points depending on how far they progressed. These points are used in the skill tree. Every tower has a different skill tree that also includes paths that completely change how the tower behaves. In the worst-case scenario, the player can choose to spend points to rearrange the skill tree for their needs."
       }
     ]
   }
