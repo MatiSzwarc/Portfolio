@@ -48,7 +48,7 @@
   </header>
 
   <main>
-    <!-- SCREEN 1: Interactive Magic Video Player on Left, Specs & Info on Right (No Scroll Needed) -->
+    <!-- SCREEN 1: Standard Video of Wastemancer on Left, Specs & Info on Right (No Scroll Needed) -->
     <section class="subpage-screen-1">
       <div class="container">
         <div class="subpage-nav-bar">
@@ -67,39 +67,11 @@
         </div>
 
         <div class="subpage-split-hero">
-          <!-- Left: Elemental Magic Video Player (Scaled Down) -->
-          <div class="subpage-media-col" id="magic-player">
-            <!-- Icon Selector Row -->
-            <div class="subpage-magic-selector">
-              <button class="subpage-magic-btn active magic-icon-btn" data-type="heal" title="Heal Magic">
-                <img src="assets/images/Wastemancer/healicon.png" alt="Heal" />
-                <span>Heal</span>
-              </button>
-              <button class="subpage-magic-btn magic-icon-btn" data-type="fire" title="Fire Magic">
-                <img src="assets/images/Wastemancer/fireicon.png" alt="Fire" />
-                <span>Fire</span>
-              </button>
-              <button class="subpage-magic-btn magic-icon-btn" data-type="water" title="Water Magic">
-                <img src="assets/images/Wastemancer/watericon.png" alt="Water" />
-                <span>Water</span>
-              </button>
-              <button class="subpage-magic-btn magic-icon-btn" data-type="earth" title="Earth Magic">
-                <img src="assets/images/Wastemancer/earthicon.png" alt="Earth" />
-                <span>Earth</span>
-              </button>
-              <button class="subpage-magic-btn magic-icon-btn" data-type="wind" title="Wind Magic">
-                <img src="assets/images/Wastemancer/windicon.png" alt="Wind" />
-                <span>Wind</span>
-              </button>
-            </div>
-
-            <!-- Video Player Frame -->
+          <!-- Left: Standard Video of Wastemancer from main page (Scaled Down) -->
+          <div class="subpage-media-col">
             <div class="subpage-media-frame">
-              <video id="magic-video" src="assets/images/Wastemancer/healmovie.mp4" controls autoplay loop muted playsinline></video>
+              <img src="assets/images/Wastemancer.gif" alt="Wastemancer Gameplay Video / GIF" />
             </div>
-            <p id="magic-caption" class="magic-video-caption">
-              <strong>Heal Magic</strong> — Tactile healing visual aura with custom swirling particles.
-            </p>
           </div>
 
           <!-- Right: Title, Engine, Specs (Duration, Team Size, Platform), Roles -->
@@ -143,7 +115,7 @@
       </div>
     </section>
 
-    <!-- SCREEN 2: Roles, Design Pillars + Systems, Bottom Pictures on Horizontal Line -->
+    <!-- SCREEN 2: Roles, Design Pillars + Systems, Bottom Pictures & Elements Video Showcase -->
     <section class="subpage-screen-2">
       <div class="container">
         <!-- Design Pillars + Systems Grid -->
@@ -182,36 +154,70 @@
           </div>
         </div>
 
-        <!-- Bottom Pictures Lane (At least 3 in horizontal line, 3-5 word notes) -->
+        <!-- Gameplay Showcase Section (Elements Video Player + Level Design Images) -->
         <div class="subpage-pictures-lane">
-          <h3 class="pictures-lane-header">Level Design &amp; Arena Progression (Lvl 01 – 04)</h3>
+          <h3 class="pictures-lane-header">Gameplay showcase</h3>
+
+          <!-- Interactive Elemental Magic Player -->
+          <div id="magic-player" style="margin-bottom: 1.5rem; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1.25rem;">
+            <div class="subpage-magic-selector" style="margin-bottom: 0.85rem;">
+              <button class="subpage-magic-btn active magic-icon-btn" data-type="heal" title="Heal Magic">
+                <img src="assets/images/Wastemancer/healicon.png" alt="Heal" />
+                <span>Heal</span>
+              </button>
+              <button class="subpage-magic-btn magic-icon-btn" data-type="fire" title="Fire Magic">
+                <img src="assets/images/Wastemancer/fireicon.png" alt="Fire" />
+                <span>Fire</span>
+              </button>
+              <button class="subpage-magic-btn magic-icon-btn" data-type="water" title="Water Magic">
+                <img src="assets/images/Wastemancer/watericon.png" alt="Water" />
+                <span>Water</span>
+              </button>
+              <button class="subpage-magic-btn magic-icon-btn" data-type="earth" title="Earth Magic">
+                <img src="assets/images/Wastemancer/earthicon.png" alt="Earth" />
+                <span>Earth</span>
+              </button>
+              <button class="subpage-magic-btn magic-icon-btn" data-type="wind" title="Wind Magic">
+                <img src="assets/images/Wastemancer/windicon.png" alt="Wind" />
+                <span>Wind</span>
+              </button>
+            </div>
+            <div class="subpage-media-frame" style="max-height: 320px; aspect-ratio: 16/9; margin: 0 auto; max-width: 680px;">
+              <video id="magic-video" src="assets/images/Wastemancer/healmovie.mp4" controls autoplay loop muted playsinline></video>
+            </div>
+            <p id="magic-caption" class="magic-video-caption" style="margin-top: 0.5rem;">
+              <strong>Heal Magic</strong> — Tactile healing visual aura with custom swirling particles.
+            </p>
+          </div>
+
+          <!-- 4 Images on Horizontal line with updated captions -->
           <div class="pictures-lane-grid" style="grid-template-columns: repeat(4, 1fr);">
             <div class="picture-lane-card">
               <div class="picture-lane-thumb">
-                <img src="assets/images/Wastemancer/Lvl01.png" alt="Stage 01: Arena blockout" />
+                <img src="assets/images/Wastemancer/Lvl01.png" alt="Drawed area" />
               </div>
-              <div class="picture-lane-note">Stage 01: Arena blockout</div>
+              <div class="picture-lane-note">Drawed area</div>
             </div>
 
             <div class="picture-lane-card">
               <div class="picture-lane-thumb">
-                <img src="assets/images/Wastemancer/Lvl02.png" alt="Stage 02: Navigation geometry" />
+                <img src="assets/images/Wastemancer/Lvl02.png" alt="Level Blockout" />
               </div>
-              <div class="picture-lane-note">Stage 02: Navigation geometry</div>
+              <div class="picture-lane-note">Level Blockout</div>
             </div>
 
             <div class="picture-lane-card">
               <div class="picture-lane-thumb">
-                <img src="assets/images/Wastemancer/Lvl03.png" alt="Stage 03: Environment dressing" />
+                <img src="assets/images/Wastemancer/Lvl03.png" alt="Camera setup" />
               </div>
-              <div class="picture-lane-note">Stage 03: Environment dressing</div>
+              <div class="picture-lane-note">Camera setup</div>
             </div>
 
             <div class="picture-lane-card">
               <div class="picture-lane-thumb">
-                <img src="assets/images/Wastemancer/Lvl04.png" alt="Stage 04: Lighting and post-processing" />
+                <img src="assets/images/Wastemancer/Lvl04.png" alt="Finished view" />
               </div>
-              <div class="picture-lane-note">Stage 04: Lighting &amp; post-processing</div>
+              <div class="picture-lane-note">Finished view</div>
             </div>
           </div>
         </div>

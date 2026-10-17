@@ -67,10 +67,10 @@
         </div>
 
         <div class="subpage-split-hero">
-          <!-- Left: Video (Scaled Down) -->
+          <!-- Left: Video from main page (Scaled Down) -->
           <div class="subpage-media-col">
             <div class="subpage-media-frame">
-              <video src="assets/images/Necromeowcy/VFX02.mp4" controls autoplay loop muted playsinline></video>
+              <img src="assets/images/Necromeowcy.gif" alt="Necromeowcy Gameplay Video / GIF" />
             </div>
           </div>
 
@@ -160,7 +160,14 @@
         <!-- Bottom Pictures Lane (At least 3 in horizontal line, 3-5 word notes) -->
         <div class="subpage-pictures-lane">
           <h3 class="pictures-lane-header">Systems &amp; Narrative Showcase</h3>
-          <div class="pictures-lane-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="pictures-lane-grid" style="grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));">
+            <div class="picture-lane-card">
+              <div class="picture-lane-thumb">
+                <video src="assets/images/Necromeowcy/VFX02.mp4" controls autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+              </div>
+              <div class="picture-lane-note">PURR energy in-game video</div>
+            </div>
+
             <div class="picture-lane-card">
               <div class="picture-lane-thumb">
                 <img src="assets/images/Necromeowcy/VFX01.png" alt="PURR energy shader logic" />
@@ -198,9 +205,9 @@
 
             <div class="picture-lane-card">
               <div class="picture-lane-thumb">
-                <img src="assets/images/Necromeowcy/Narrative03.png" alt="Multiple endings win conditions" />
+                <img src="assets/images/Necromeowcy/Narrative03.png" alt="Game narrative choises" />
               </div>
-              <div class="picture-lane-note">Multiple endings win conditions</div>
+              <div class="picture-lane-note">Game narrative choises</div>
             </div>
           </div>
         </div>

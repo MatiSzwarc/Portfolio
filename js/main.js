@@ -151,7 +151,7 @@ function renderProjects(categoryFilter = 'all') {
         <p class="card-meta-line roles">${project.metaLine3}</p>
         <div class="card-actions">
           <a href="${project.pageUrl}" class="btn-case-study">
-            View Breakdown
+            View Details
           </a>
           ${project.itchUrl ? `
             <a href="${project.itchUrl}" target="_blank" rel="noopener noreferrer" class="btn-itch-direct" title="Play on Itch.io" aria-label="Play on Itch.io">
