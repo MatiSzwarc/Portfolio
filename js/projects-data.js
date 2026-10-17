@@ -118,14 +118,18 @@ export const projects = [
       "UI Programming"
     ],
     designPillars: [
-      "Turn-based tactical fantasy combat.",
-      "Synergistic spellcasting chains.",
-      "High-impact animated combat feedback."
+      "Dark fantasy world",
+      "Epic quality attack sequences",
+      "turn base system with Quick time events."
     ],
     systems: [
-      "Action point combat economy.",
-      "Turn-order timeline queue.",
-      "Unreal Engine 5 animation state trees."
+      "3 different characters to play.",
+      "Turn based combat.",
+      "Over 30 sequences across game.",
+      "6 Different maps",
+      "Loading screen",
+      "Complex UI system",
+      "Status effects, enemy and hero types"
     ],
     highlights: [
       "System Designer: Formulating tactical turn-based combat systems, ability interactions, and action economy.",

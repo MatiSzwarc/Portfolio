@@ -154,7 +154,7 @@ function renderProjects(categoryFilter = 'all') {
             View Details
           </a>
           ${project.itchUrl ? `
-            <a href="${project.itchUrl}" target="_blank" rel="noopener noreferrer" class="btn-itch-direct" title="Play on Itch.io" aria-label="Play on Itch.io">
+            <a href="${project.itchUrl}" target="_blank" rel="noopener noreferrer" class="btn-itch-direct" title="View on itch.io" aria-label="View on itch.io">
               <img src="assets/icons/Itchioicon.png" alt="itch.io" width="18" height="18" />
             </a>
           ` : ''}
