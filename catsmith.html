@@ -119,203 +119,222 @@
 
         <!-- Section Navigation Tabs -->
         <div class="subpage-section-tabs">
-          <a href="#overview" class="subpage-section-tab">Overview</a>
-          <a href="#contribution" class="subpage-section-tab">My Contribution</a>
+          <button type="button" class="subpage-section-tab active" data-tab-target="overview">
+            <span>Overview</span>
+          </button>
+          <button type="button" class="subpage-section-tab" data-tab-target="contribution">
+            <span>My Contribution</span>
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- SCREEN 2: Overview (Roles, Design Pillars + Systems, Bottom Pictures on Horizontal Line) -->
-    <section id="overview" class="subpage-screen-2">
+    <!-- SCREEN 2: Tabbed Content (Overview & My Contribution) -->
+    <section class="subpage-screen-2" id="game-tabs-section">
       <div class="container">
-        <!-- Roles, Design Pillars + Systems Grid -->
-        <div class="screen-2-grid">
-          <!-- Design Pillars Card -->
-          <div class="pillar-system-card">
-            <h2 class="pillar-system-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M12 8v8"></path>
-                <path d="M8 12h8"></path>
-              </svg>
-              <span>Design Pillars</span>
-            </h2>
-            <ul class="pillar-system-list">
-              <li>Local co-op.</li>
-              <li>Craft recipies solo or together.</li>
-              <li>Make sure customers leave with their order completed.</li>
-            </ul>
-          </div>
-
-          <!-- Systems Card -->
-          <div class="pillar-system-card">
-            <h2 class="pillar-system-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-              </svg>
-              <span>Systems</span>
-            </h2>
-            <ul class="pillar-system-list">
-              <li>Fast paced minigames different from each other.</li>
-              <li>Order management.</li>
-              <li>Two different AI state trees for Customers and Master.</li>
-            </ul>
-          </div>
+        <!-- Tab Bar inside Screen 2 -->
+        <div class="subpage-section-tabs" style="margin-top: 0; margin-bottom: 2.25rem; border-top: none; padding-top: 0;">
+          <button type="button" class="subpage-section-tab active" data-tab-target="overview">
+            <span>Overview</span>
+          </button>
+          <button type="button" class="subpage-section-tab" data-tab-target="contribution">
+            <span>My Contribution</span>
+          </button>
         </div>
 
-        <!-- Bottom Pictures Lane (At least 3 in horizontal line, 3-5 word notes) -->
-        <div class="subpage-pictures-lane">
-          <h3 class="pictures-lane-header">Showcase</h3>
-          <div class="pictures-lane-grid" style="grid-template-columns: repeat(3, 1fr);">
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/Catsmith/Image01.png" alt="Main Characters" />
+        <!-- TAB 1: OVERVIEW -->
+        <div id="tab-overview" class="subpage-tab-panel active">
+          <div class="tab-header-wrap">
+            <h2 class="subpage-tab-heading">Overview</h2>
+          </div>
+
+          <!-- Roles, Design Pillars + Systems Grid -->
+          <div class="screen-2-grid">
+            <!-- Design Pillars Card -->
+            <div class="pillar-system-card">
+              <h2 class="pillar-system-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 8v8"></path>
+                  <path d="M8 12h8"></path>
+                </svg>
+                <span>Design Pillars</span>
+              </h2>
+              <ul class="pillar-system-list">
+                <li>Local co-op.</li>
+                <li>Craft recipies solo or together.</li>
+                <li>Make sure customers leave with their order completed.</li>
+              </ul>
+            </div>
+
+            <!-- Systems Card -->
+            <div class="pillar-system-card">
+              <h2 class="pillar-system-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+                <span>Systems</span>
+              </h2>
+              <ul class="pillar-system-list">
+                <li>Fast paced minigames different from each other.</li>
+                <li>Order management.</li>
+                <li>Two different AI state trees for Customers and Master.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Bottom Pictures Lane (At least 3 in horizontal line, 3-5 word notes) -->
+          <div class="subpage-pictures-lane">
+            <h3 class="pictures-lane-header">Showcase</h3>
+            <div class="pictures-lane-grid" style="grid-template-columns: repeat(3, 1fr);">
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/Catsmith/Image01.png" alt="Main Characters" />
+                </div>
+                <div class="picture-lane-note">Main Characters</div>
               </div>
-              <div class="picture-lane-note">Main Characters</div>
-            </div>
 
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/Catsmith/image02.png" alt="Forge Area" />
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/Catsmith/image02.png" alt="Forge Area" />
+                </div>
+                <div class="picture-lane-note">Forge Area</div>
               </div>
-              <div class="picture-lane-note">Forge Area</div>
-            </div>
 
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/Catsmith/Image03.png" alt="Customer orders" />
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/Catsmith/Image03.png" alt="Customer orders" />
+                </div>
+                <div class="picture-lane-note">Customer orders</div>
               </div>
-              <div class="picture-lane-note">Customer orders</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SCREEN 3: My Contribution -->
-    <section id="contribution" class="subpage-contribution-section">
-      <div class="container">
-        <div class="contribution-header-wrap">
-          <h2 class="contribution-section-title">My Contribution</h2>
-          <!-- Role navigation buttons -->
-          <div class="contribution-roles-nav">
-            <a href="#catsmith-product-owner" class="contribution-role-btn">Product Owner</a>
-            <a href="#catsmith-lead-designer" class="contribution-role-btn">Lead Designer</a>
-            <a href="#catsmith-level-designer" class="contribution-role-btn">Level Designer</a>
-            <a href="#catsmith-ai-programmer" class="contribution-role-btn">AI Programmer</a>
-            <a href="#catsmith-vfx-artist" class="contribution-role-btn">VFX Artist</a>
-          </div>
-        </div>
-
-        <div class="contribution-grid">
-          <!-- Product Owner -->
-          <div id="catsmith-product-owner" class="contribution-card">
-            <h3 class="contribution-role-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-              <span>Product Owner</span>
-            </h3>
-            <div class="contribution-role-body">
-              <p>I was responsible for coordinating the team and managing the development process. This included daily meetings, discussing deadlines, identifying potential problems, and reviewing our progress.</p>
-              <p>I helped the team establish priorities by distinguishing between essential features and nice-to-have additions, ensuring we stayed focused on delivering the game within our time constraints.</p>
-            </div>
-          </div>
-
-          <!-- Lead Designer -->
-          <div id="catsmith-lead-designer" class="contribution-card">
-            <h3 class="contribution-role-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg>
-              <span>Lead Designer</span>
-            </h3>
-            <div class="contribution-role-body">
-              <p>As both Product Owner and Lead Designer, I was responsible for making final design decisions during brainstorming sessions and guiding the team towards a cohesive gameplay experience.</p>
-              <p>My work involved extensive discussions about the game's crafting systems, workstations, and overall gameplay loop. I helped shape these elements to ensure they worked together to create an engaging and consistent experience.</p>
-            </div>
-          </div>
-
-          <!-- Level Designer -->
-          <div id="catsmith-level-designer" class="contribution-card">
-            <h3 class="contribution-role-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="3" y1="9" x2="21" y2="9"></line>
-                <line x1="9" y1="21" x2="9" y2="9"></line>
-              </svg>
-              <span>Level Designer</span>
-            </h3>
-            <div class="contribution-role-body">
-              <p>The main shop area evolved several times to better support the gameplay loop. I designed the paths and layout to guide players naturally through the crafting process, from receiving an initial recipe to delivering the finished product.</p>
-              <p>I ultimately settled on a circular layout with intersecting paths in the middle. This structure helped players navigate the shop intuitively while occasionally breaking their usual routes, adding variety to their movement through the space.</p>
-            </div>
-          </div>
-
-          <!-- AI Programmer -->
-          <div id="catsmith-ai-programmer" class="contribution-card">
-            <h3 class="contribution-role-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-              </svg>
-              <span>AI Programmer</span>
-            </h3>
-            <div class="contribution-role-body">
-              <p>The game features two distinct NPC types: the Master and the Customers.</p>
-              <p>The Master moves around the shop, occasionally obstructing the player's path. He comments on the quality of crafted items and provides helpful tips to guide players through the game.</p>
-              <p>The Customers follow a more complex behaviour system. They enter the shop, check whether the counter is available, and wait until they can place an order or lose patience. The system also allows up to three customers to wait for their orders to be completed simultaneously.</p>
-            </div>
-          </div>
-
-          <!-- VFX Artist -->
-          <div id="catsmith-vfx-artist" class="contribution-card">
-            <h3 class="contribution-role-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"></path>
-              </svg>
-              <span>VFX Artist</span>
-            </h3>
-            <div class="contribution-role-body">
-              <p>Due to time constraints, we focused on a small number of visual effects that would have the greatest impact on the gameplay experience.</p>
-              <p>I primarily worked on effects that communicated player actions, including a circular effect around the player, dust clouds during movement, and effects for hammering and crafting.</p>
-              <p>I also programmed the forge's fire effects, adjusting their parameters dynamically during gameplay to communicate the forge's current state. This allowed players to easily identify whether the forge was lit and ready to use.</p>
             </div>
           </div>
         </div>
 
-        <!-- Place for Images: 4 of them named CatsmithTech01, CatsmithTech02, CatsmithTech03, CatsmithTech04 -->
-        <div class="subpage-pictures-lane">
-          <h3 class="pictures-lane-header">Technical Showcase</h3>
-          <div class="pictures-lane-grid" style="grid-template-columns: repeat(4, 1fr);">
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/Catsmith/CatsmithTech01.png" alt="Catsmith Technical 01" />
+        <!-- TAB 2: MY CONTRIBUTION (Hidden by default when Overview is active) -->
+        <div id="tab-contribution" class="subpage-tab-panel" style="display: none;">
+          <div class="tab-header-wrap">
+            <h2 class="subpage-tab-heading">My Contribution</h2>
+            <!-- Role navigation buttons -->
+            <div class="contribution-roles-nav">
+              <a href="#catsmith-product-owner" class="contribution-role-btn">Product Owner</a>
+              <a href="#catsmith-lead-designer" class="contribution-role-btn">Lead Designer</a>
+              <a href="#catsmith-level-designer" class="contribution-role-btn">Level Designer</a>
+              <a href="#catsmith-ai-programmer" class="contribution-role-btn">AI Programmer</a>
+              <a href="#catsmith-vfx-artist" class="contribution-role-btn">VFX Artist</a>
+            </div>
+          </div>
+
+          <div class="contribution-grid">
+            <!-- Product Owner -->
+            <div id="catsmith-product-owner" class="contribution-card">
+              <h3 class="contribution-role-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span>Product Owner</span>
+              </h3>
+              <div class="contribution-role-body">
+                <p>I was responsible for coordinating the team and managing the development process. This included daily meetings, discussing deadlines, identifying potential problems, and reviewing our progress.</p>
+                <p>I helped the team establish priorities by distinguishing between essential features and nice-to-have additions, ensuring we stayed focused on delivering the game within our time constraints.</p>
               </div>
-              <div class="picture-lane-note">Technical Showcase 01</div>
             </div>
 
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/Catsmith/CatsmithTech02.png" alt="Catsmith Technical 02" />
+            <!-- Lead Designer -->
+            <div id="catsmith-lead-designer" class="contribution-card">
+              <h3 class="contribution-role-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                <span>Lead Designer</span>
+              </h3>
+              <div class="contribution-role-body">
+                <p>As both Product Owner and Lead Designer, I was responsible for making final design decisions during brainstorming sessions and guiding the team towards a cohesive gameplay experience.</p>
+                <p>My work involved extensive discussions about the game's crafting systems, workstations, and overall gameplay loop. I helped shape these elements to ensure they worked together to create an engaging and consistent experience.</p>
               </div>
-              <div class="picture-lane-note">Technical Showcase 02</div>
             </div>
 
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/Catsmith/CatsmithTech03.png" alt="Catsmith Technical 03" />
+            <!-- Level Designer -->
+            <div id="catsmith-level-designer" class="contribution-card">
+              <h3 class="contribution-role-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+                <span>Level Designer</span>
+              </h3>
+              <div class="contribution-role-body">
+                <p>The main shop area evolved several times to better support the gameplay loop. I designed the paths and layout to guide players naturally through the crafting process, from receiving an initial recipe to delivering the finished product.</p>
+                <p>I ultimately settled on a circular layout with intersecting paths in the middle. This structure helped players navigate the shop intuitively while occasionally breaking their usual routes, adding variety to their movement through the space.</p>
               </div>
-              <div class="picture-lane-note">Technical Showcase 03</div>
             </div>
 
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/Catsmith/CatsmithTech04.png" alt="Catsmith Technical 04" />
+            <!-- AI Programmer -->
+            <div id="catsmith-ai-programmer" class="contribution-card">
+              <h3 class="contribution-role-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+                <span>AI Programmer</span>
+              </h3>
+              <div class="contribution-role-body">
+                <p>The game features two distinct NPC types: the Master and the Customers.</p>
+                <p>The Master moves around the shop, occasionally obstructing the player's path. He comments on the quality of crafted items and provides helpful tips to guide players through the game.</p>
+                <p>The Customers follow a more complex behaviour system. They enter the shop, check whether the counter is available, and wait until they can place an order or lose patience. The system also allows up to three customers to wait for their orders to be completed simultaneously.</p>
               </div>
-              <div class="picture-lane-note">Technical Showcase 04</div>
+            </div>
+
+            <!-- VFX Artist -->
+            <div id="catsmith-vfx-artist" class="contribution-card">
+              <h3 class="contribution-role-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"></path>
+                </svg>
+                <span>VFX Artist</span>
+              </h3>
+              <div class="contribution-role-body">
+                <p>Due to time constraints, we focused on a small number of visual effects that would have the greatest impact on the gameplay experience.</p>
+                <p>I primarily worked on effects that communicated player actions, including a circular effect around the player, dust clouds during movement, and effects for hammering and crafting.</p>
+                <p>I also programmed the forge's fire effects, adjusting their parameters dynamically during gameplay to communicate the forge's current state. This allowed players to easily identify whether the forge was lit and ready to use.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Place for Images: 4 of them named CatsmithTech01, CatsmithTech02, CatsmithTech03, CatsmithTech04 -->
+          <div class="subpage-pictures-lane">
+            <h3 class="pictures-lane-header">Technical Showcase</h3>
+            <div class="pictures-lane-grid" style="grid-template-columns: repeat(4, 1fr);">
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/Catsmith/CatsmithTech01.png" alt="Catsmith Technical 01" />
+                </div>
+                <div class="picture-lane-note">Technical Showcase 01</div>
+              </div>
+
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/Catsmith/CatsmithTech02.png" alt="Catsmith Technical 02" />
+                </div>
+                <div class="picture-lane-note">Technical Showcase 02</div>
+              </div>
+
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/Catsmith/CatsmithTech03.png" alt="Catsmith Technical 03" />
+                </div>
+                <div class="picture-lane-note">Technical Showcase 03</div>
+              </div>
+
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/Catsmith/CatsmithTech04.png" alt="Catsmith Technical 04" />
+                </div>
+                <div class="picture-lane-note">Technical Showcase 04</div>
+              </div>
             </div>
           </div>
         </div>

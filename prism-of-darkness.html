@@ -115,213 +115,232 @@
 
         <!-- Section Navigation Tabs -->
         <div class="subpage-section-tabs">
-          <a href="#overview" class="subpage-section-tab">Overview</a>
-          <a href="#contribution" class="subpage-section-tab">My Contribution</a>
+          <button type="button" class="subpage-section-tab active" data-tab-target="overview">
+            <span>Overview</span>
+          </button>
+          <button type="button" class="subpage-section-tab" data-tab-target="contribution">
+            <span>My Contribution</span>
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- SCREEN 2: Overview (Roles, Design Pillars + Systems, Bottom Pictures on Horizontal Line) -->
-    <section id="overview" class="subpage-screen-2">
+    <!-- SCREEN 2: Tabbed Content (Overview & My Contribution) -->
+    <section class="subpage-screen-2" id="game-tabs-section">
       <div class="container">
-        <!-- Design Pillars + Systems Grid -->
-        <div class="screen-2-grid">
-          <!-- Design Pillars Card -->
-          <div class="pillar-system-card">
-            <h2 class="pillar-system-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M12 8v8"></path>
-                <path d="M8 12h8"></path>
-              </svg>
-              <span>Design Pillars</span>
-            </h2>
-            <ul class="pillar-system-list">
-              <li>Dark fantasy world</li>
-              <li>Epic quality attack sequences</li>
-              <li>Turn base system with Quick time events.</li>
-            </ul>
-          </div>
-
-          <!-- Systems Card -->
-          <div class="pillar-system-card">
-            <h2 class="pillar-system-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-              </svg>
-              <span>Systems</span>
-            </h2>
-            <ul class="pillar-system-list">
-              <li>3 different characters to play.</li>
-              <li>Turn based combat.</li>
-              <li>Over 30 sequences across game.</li>
-              <li>6 Different maps</li>
-              <li>Loading screen</li>
-              <li>Complex UI system</li>
-              <li>Status effects, enemy and hero types</li>
-            </ul>
-          </div>
+        <!-- Tab Bar inside Screen 2 -->
+        <div class="subpage-section-tabs" style="margin-top: 0; margin-bottom: 2.25rem; border-top: none; padding-top: 0;">
+          <button type="button" class="subpage-section-tab active" data-tab-target="overview">
+            <span>Overview</span>
+          </button>
+          <button type="button" class="subpage-section-tab" data-tab-target="contribution">
+            <span>My Contribution</span>
+          </button>
         </div>
 
-        <!-- Bottom Pictures Lane (At least 3 in horizontal line, 3-5 word notes) -->
-        <div class="subpage-pictures-lane">
-          <h3 class="pictures-lane-header">Showcase</h3>
-          <div class="pictures-lane-grid" style="grid-template-columns: repeat(3, 1fr);">
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/PrismOfDarkness/Prism01.png" alt="Main Cathedra" />
-              </div>
-              <div class="picture-lane-note">Main Cathedra</div>
-            </div>
-
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/PrismOfDarkness/Prism02.png" alt="Character Spell" />
-              </div>
-              <div class="picture-lane-note">Character Spell</div>
-            </div>
-
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/PrismOfDarkness/Prism03.png" alt="Arena Overwiew" />
-              </div>
-              <div class="picture-lane-note">Arena Overwiew</div>
-            </div>
-
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/PrismOfDarkness/Prism04.png" alt="Main Game UI" />
-              </div>
-              <div class="picture-lane-note">Main Game UI</div>
-            </div>
-
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/PrismOfDarkness/Prism05.png" alt="Enemy Sequence" />
-              </div>
-              <div class="picture-lane-note">Enemy Sequence</div>
-            </div>
-
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/PrismOfDarkness/Prism06.png" alt="Boss Fight" />
-              </div>
-              <div class="picture-lane-note">Boss Fight</div>
-            </div>
+        <!-- TAB 1: OVERVIEW -->
+        <div id="tab-overview" class="subpage-tab-panel active">
+          <div class="tab-header-wrap">
+            <h2 class="subpage-tab-heading">Overview</h2>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- SCREEN 3: My Contribution -->
-    <section id="contribution" class="subpage-contribution-section">
-      <div class="container">
-        <div class="contribution-header-wrap">
-          <h2 class="contribution-section-title">My Contribution</h2>
-          <!-- Role navigation buttons -->
-          <div class="contribution-roles-nav">
-            <a href="#prism-system-designer" class="contribution-role-btn">System Designer</a>
-            <a href="#prism-ui-programming" class="contribution-role-btn">UI Programming</a>
-            <a href="#prism-animation-implementation" class="contribution-role-btn">Animation Implementation</a>
-          </div>
-        </div>
+          <!-- Design Pillars + Systems Grid -->
+          <div class="screen-2-grid">
+            <!-- Design Pillars Card -->
+            <div class="pillar-system-card">
+              <h2 class="pillar-system-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 8v8"></path>
+                  <path d="M8 12h8"></path>
+                </svg>
+                <span>Design Pillars</span>
+              </h2>
+              <ul class="pillar-system-list">
+                <li>Dark fantasy world</li>
+                <li>Epic quality attack sequences</li>
+                <li>Turn base system with Quick time events.</li>
+              </ul>
+            </div>
 
-        <div class="contribution-grid">
-          <!-- System Designer -->
-          <div id="prism-system-designer" class="contribution-card">
-            <h3 class="contribution-role-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-              </svg>
-              <span>System Designer</span>
-            </h3>
-            <div class="contribution-role-body">
-              <p>Starting from the base project, I established the overall structure for the game's files and systems, connecting everything through a unified map architecture managed by a central manager. This allowed us to configure maps by specifying which map to load, how many enemies to spawn, and which enemy types to include, all through the system's configuration.</p>
-              <p>I also designed and implemented the turn-based combat system, from defining its core mechanics and dependencies to building a functional foundation for the gameplay.</p>
-              <p>During implementation, I encountered challenges with keeping the entire combat architecture inside a single Blueprint. To make the system more modular and maintainable, I split it into smaller, specialized managers:</p>
-              <div class="contribution-subitem">
-                <strong>Arena Manager:</strong> Controls turn order and manages combat progression.
-              </div>
-              <div class="contribution-subitem">
-                <strong>UI HUD Manager:</strong> Communicates gameplay events to the relevant UI widgets, keeping the interface updated with the current combat state.
-              </div>
-              <div class="contribution-subitem">
-                <strong>Camera Manager:</strong> Controls camera movement and positioning during combat.
-              </div>
-              <p>This modular architecture made the system easier to maintain and allowed individual components to handle their responsibilities independently.</p>
+            <!-- Systems Card -->
+            <div class="pillar-system-card">
+              <h2 class="pillar-system-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+                <span>Systems</span>
+              </h2>
+              <ul class="pillar-system-list">
+                <li>3 different characters to play.</li>
+                <li>Turn based combat.</li>
+                <li>Over 30 sequences across game.</li>
+                <li>6 Different maps</li>
+                <li>Loading screen</li>
+                <li>Complex UI system</li>
+                <li>Status effects, enemy and hero types</li>
+              </ul>
             </div>
           </div>
 
-          <!-- UI Programming -->
-          <div id="prism-ui-programming" class="contribution-card">
-            <h3 class="contribution-role-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="3" y1="9" x2="21" y2="9"></line>
-                <line x1="9" y1="21" x2="9" y2="9"></line>
-              </svg>
-              <span>UI Programming</span>
-            </h3>
-            <div class="contribution-role-body">
-              <p>Since the game relied heavily on UI widgets, I needed to develop a scalable and organized system that would be easy to maintain and expand.</p>
-              <p>I divided the UI into two main categories: Main Widgets and Additional Widgets.</p>
-              <div class="contribution-subitem">
-                <strong>Main Widgets:</strong> A persistent set of widgets that remain visible throughout combat, providing players with essential information.
+          <!-- Bottom Pictures Lane (At least 3 in horizontal line, 3-5 word notes) -->
+          <div class="subpage-pictures-lane">
+            <h3 class="pictures-lane-header">Showcase</h3>
+            <div class="pictures-lane-grid" style="grid-template-columns: repeat(3, 1fr);">
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/PrismOfDarkness/Prism01.png" alt="Main Cathedra" />
+                </div>
+                <div class="picture-lane-note">Main Cathedra</div>
               </div>
-              <div class="contribution-subitem">
-                <strong>Additional Widgets:</strong> Widgets that appear and disappear as players switch between different interactions.
-              </div>
-              <p>This structure kept the interface organized and made it easier to manage which elements were displayed at any given time.</p>
-              <p>As the project grew, loading all the necessary assets without causing performance issues became a challenge. To address this, I implemented a loading screen that checks whether the required map assets have finished loading before allowing the screen to disappear.</p>
-            </div>
-          </div>
 
-          <!-- Animation Implementation -->
-          <div id="prism-animation-implementation" class="contribution-card">
-            <h3 class="contribution-role-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-              </svg>
-              <span>Animation Implementation</span>
-            </h3>
-            <div class="contribution-role-body">
-              <p>The game features over 30 animation sequences, six sequences per player character alongside animations for enemies. I primarily worked on implementing character animations, as well as few enemy animations.</p>
-              <p>Many of these sequences required additional programming to synchronize animations with gameplay events. This included triggering Quick Time Events at the correct moments and notifying the enemy's systems when they received damage.</p>
-              <p>We used a shared skeleton. Animations created for other skeletons were retargeted to this common skeleton, allowing them to be integrated into the existing animation system.</p>
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/PrismOfDarkness/Prism02.png" alt="Character Spell" />
+                </div>
+                <div class="picture-lane-note">Character Spell</div>
+              </div>
+
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/PrismOfDarkness/Prism03.png" alt="Arena Overwiew" />
+                </div>
+                <div class="picture-lane-note">Arena Overwiew</div>
+              </div>
+
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/PrismOfDarkness/Prism04.png" alt="Main Game UI" />
+                </div>
+                <div class="picture-lane-note">Main Game UI</div>
+              </div>
+
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/PrismOfDarkness/Prism05.png" alt="Enemy Sequence" />
+                </div>
+                <div class="picture-lane-note">Enemy Sequence</div>
+              </div>
+
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/PrismOfDarkness/Prism06.png" alt="Boss Fight" />
+                </div>
+                <div class="picture-lane-note">Boss Fight</div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Place for Images: 4 of them named PrismTech01, PrismTech02, PrismTech03, PrismTech04 -->
-        <div class="subpage-pictures-lane">
-          <h3 class="pictures-lane-header">Technical Showcase</h3>
-          <div class="pictures-lane-grid" style="grid-template-columns: repeat(4, 1fr);">
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/PrismOfDarkness/PrismTech01.png" alt="Prism Technical 01" />
+        <!-- TAB 2: MY CONTRIBUTION (Hidden by default when Overview is active) -->
+        <div id="tab-contribution" class="subpage-tab-panel" style="display: none;">
+          <div class="tab-header-wrap">
+            <h2 class="subpage-tab-heading">My Contribution</h2>
+            <!-- Role navigation buttons -->
+            <div class="contribution-roles-nav">
+              <a href="#prism-system-designer" class="contribution-role-btn">System Designer</a>
+              <a href="#prism-ui-programming" class="contribution-role-btn">UI Programming</a>
+              <a href="#prism-animation-implementation" class="contribution-role-btn">Animation Implementation</a>
+            </div>
+          </div>
+
+          <div class="contribution-grid">
+            <!-- System Designer -->
+            <div id="prism-system-designer" class="contribution-card">
+              <h3 class="contribution-role-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+                <span>System Designer</span>
+              </h3>
+              <div class="contribution-role-body">
+                <p>Starting from the base project, I established the overall structure for the game's files and systems, connecting everything through a unified map architecture managed by a central manager. This allowed us to configure maps by specifying which map to load, how many enemies to spawn, and which enemy types to include, all through the system's configuration.</p>
+                <p>I also designed and implemented the turn-based combat system, from defining its core mechanics and dependencies to building a functional foundation for the gameplay.</p>
+                <p>During implementation, I encountered challenges with keeping the entire combat architecture inside a single Blueprint. To make the system more modular and maintainable, I split it into smaller, specialized managers:</p>
+                <div class="contribution-subitem">
+                  <strong>Arena Manager:</strong> Controls turn order and manages combat progression.
+                </div>
+                <div class="contribution-subitem">
+                  <strong>UI HUD Manager:</strong> Communicates gameplay events to the relevant UI widgets, keeping the interface updated with the current combat state.
+                </div>
+                <div class="contribution-subitem">
+                  <strong>Camera Manager:</strong> Controls camera movement and positioning during combat.
+                </div>
+                <p>This modular architecture made the system easier to maintain and allowed individual components to handle their responsibilities independently.</p>
               </div>
-              <div class="picture-lane-note">Technical Showcase 01</div>
             </div>
 
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/PrismOfDarkness/PrismTech02.png" alt="Prism Technical 02" />
+            <!-- UI Programming -->
+            <div id="prism-ui-programming" class="contribution-card">
+              <h3 class="contribution-role-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+                <span>UI Programming</span>
+              </h3>
+              <div class="contribution-role-body">
+                <p>Since the game relied heavily on UI widgets, I needed to develop a scalable and organized system that would be easy to maintain and expand.</p>
+                <p>I divided the UI into two main categories: Main Widgets and Additional Widgets.</p>
+                <div class="contribution-subitem">
+                  <strong>Main Widgets:</strong> A persistent set of widgets that remain visible throughout combat, providing players with essential information.
+                </div>
+                <div class="contribution-subitem">
+                  <strong>Additional Widgets:</strong> Widgets that appear and disappear as players switch between different interactions.
+                </div>
+                <p>This structure kept the interface organized and made it easier to manage which elements were displayed at any given time.</p>
+                <p>As the project grew, loading all the necessary assets without causing performance issues became a challenge. To address this, I implemented a loading screen that checks whether the required map assets have finished loading before allowing the screen to disappear.</p>
               </div>
-              <div class="picture-lane-note">Technical Showcase 02</div>
             </div>
 
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/PrismOfDarkness/PrismTech03.png" alt="Prism Technical 03" />
+            <!-- Animation Implementation -->
+            <div id="prism-animation-implementation" class="contribution-card">
+              <h3 class="contribution-role-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span>Animation Implementation</span>
+              </h3>
+              <div class="contribution-role-body">
+                <p>The game features over 30 animation sequences, six sequences per player character alongside animations for enemies. I primarily worked on implementing character animations, as well as few enemy animations.</p>
+                <p>Many of these sequences required additional programming to synchronize animations with gameplay events. This included triggering Quick Time Events at the correct moments and notifying the enemy's systems when they received damage.</p>
+                <p>We used a shared skeleton. Animations created for other skeletons were retargeted to this common skeleton, allowing them to be integrated into the existing animation system.</p>
               </div>
-              <div class="picture-lane-note">Technical Showcase 03</div>
             </div>
+          </div>
 
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/PrismOfDarkness/PrismTech04.png" alt="Prism Technical 04" />
+          <!-- Place for Images: 4 of them named PrismTech01, PrismTech02, PrismTech03, PrismTech04 -->
+          <div class="subpage-pictures-lane">
+            <h3 class="pictures-lane-header">Technical Showcase</h3>
+            <div class="pictures-lane-grid" style="grid-template-columns: repeat(4, 1fr);">
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/PrismOfDarkness/PrismTech01.png" alt="Prism Technical 01" />
+                </div>
+                <div class="picture-lane-note">Technical Showcase 01</div>
               </div>
-              <div class="picture-lane-note">Technical Showcase 04</div>
+
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/PrismOfDarkness/PrismTech02.png" alt="Prism Technical 02" />
+                </div>
+                <div class="picture-lane-note">Technical Showcase 02</div>
+              </div>
+
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/PrismOfDarkness/PrismTech03.png" alt="Prism Technical 03" />
+                </div>
+                <div class="picture-lane-note">Technical Showcase 03</div>
+              </div>
+
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/PrismOfDarkness/PrismTech04.png" alt="Prism Technical 04" />
+                </div>
+                <div class="picture-lane-note">Technical Showcase 04</div>
+              </div>
             </div>
           </div>
         </div>

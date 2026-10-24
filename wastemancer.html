@@ -116,201 +116,220 @@
 
         <!-- Section Navigation Tabs -->
         <div class="subpage-section-tabs">
-          <a href="#overview" class="subpage-section-tab">Overview</a>
-          <a href="#contribution" class="subpage-section-tab">My Contribution</a>
+          <button type="button" class="subpage-section-tab active" data-tab-target="overview">
+            <span>Overview</span>
+          </button>
+          <button type="button" class="subpage-section-tab" data-tab-target="contribution">
+            <span>My Contribution</span>
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- SCREEN 2: Overview (Roles, Design Pillars + Systems, Bottom Pictures & Elements Video Showcase) -->
-    <section id="overview" class="subpage-screen-2">
+    <!-- SCREEN 2: Tabbed Content (Overview & My Contribution) -->
+    <section class="subpage-screen-2" id="game-tabs-section">
       <div class="container">
-        <!-- Design Pillars + Systems Grid -->
-        <div class="screen-2-grid">
-          <!-- Design Pillars Card -->
-          <div class="pillar-system-card">
-            <h2 class="pillar-system-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M12 8v8"></path>
-                <path d="M8 12h8"></path>
-              </svg>
-              <span>Design Pillars</span>
-            </h2>
-            <ul class="pillar-system-list">
-              <li>Fast paced gameplay.</li>
-              <li>Easy to learn, hard to master.</li>
-              <li>Achieve the highest score possible.</li>
-            </ul>
-          </div>
-
-          <!-- Systems Card -->
-          <div class="pillar-system-card">
-            <h2 class="pillar-system-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-              </svg>
-              <span>Systems</span>
-            </h2>
-            <ul class="pillar-system-list">
-              <li>Imput combination.</li>
-              <li>Random enemy spawn.</li>
-              <li>Attack combination and cooldown.</li>
-              <li>Score based system.</li>
-            </ul>
-          </div>
+        <!-- Tab Bar inside Screen 2 -->
+        <div class="subpage-section-tabs" style="margin-top: 0; margin-bottom: 2.25rem; border-top: none; padding-top: 0;">
+          <button type="button" class="subpage-section-tab active" data-tab-target="overview">
+            <span>Overview</span>
+          </button>
+          <button type="button" class="subpage-section-tab" data-tab-target="contribution">
+            <span>My Contribution</span>
+          </button>
         </div>
 
-        <!-- Gameplay Showcase Section (Elements Video Player + Wastemancer Overview Images) -->
-        <div class="subpage-pictures-lane">
-          <h3 class="pictures-lane-header">Showcase</h3>
-
-          <!-- Interactive Elemental Magic Player -->
-          <div id="magic-player" style="margin-bottom: 1.5rem; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1.25rem;">
-            <div class="subpage-magic-selector" style="margin-bottom: 0.85rem;">
-              <button class="subpage-magic-btn active magic-icon-btn" data-type="fire" title="Fire Magic">
-                <img src="assets/images/Wastemancer/fireicon.png" alt="Fire" />
-                <span>Fire</span>
-              </button>
-              <button class="subpage-magic-btn magic-icon-btn" data-type="water" title="Water Magic">
-                <img src="assets/images/Wastemancer/watericon.png" alt="Water" />
-                <span>Water</span>
-              </button>
-              <button class="subpage-magic-btn magic-icon-btn" data-type="earth" title="Earth Magic">
-                <img src="assets/images/Wastemancer/earthicon.png" alt="Earth" />
-                <span>Earth</span>
-              </button>
-              <button class="subpage-magic-btn magic-icon-btn" data-type="wind" title="Wind Magic">
-                <img src="assets/images/Wastemancer/windicon.png" alt="Wind" />
-                <span>Wind</span>
-              </button>
-            </div>
-            <div class="subpage-media-frame" style="max-height: 320px; aspect-ratio: 16/9; margin: 0 auto; max-width: 680px;">
-              <video id="magic-video" src="assets/images/Wastemancer/firemovie.mp4" controls autoplay loop muted playsinline></video>
-            </div>
-            <p id="magic-caption" class="magic-video-caption" style="margin-top: 0.5rem;">
-              <strong>Fire Magic</strong> — Explosive flame bursts and ignition shader effects authored in Unity VFX Graph.
-            </p>
+        <!-- TAB 1: OVERVIEW -->
+        <div id="tab-overview" class="subpage-tab-panel active">
+          <div class="tab-header-wrap">
+            <h2 class="subpage-tab-heading">Overview</h2>
           </div>
 
-          <!-- 3 Images on Horizontal line for Overview -->
-          <div class="pictures-lane-grid" style="grid-template-columns: repeat(3, 1fr);">
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/Wastemancer/Wastemancer01.png" alt="Arena gameplay view" />
+          <!-- Design Pillars + Systems Grid -->
+          <div class="screen-2-grid">
+            <!-- Design Pillars Card -->
+            <div class="pillar-system-card">
+              <h2 class="pillar-system-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 8v8"></path>
+                  <path d="M8 12h8"></path>
+                </svg>
+                <span>Design Pillars</span>
+              </h2>
+              <ul class="pillar-system-list">
+                <li>Fast paced gameplay.</li>
+                <li>Easy to learn, hard to master.</li>
+                <li>Achieve the highest score possible.</li>
+              </ul>
+            </div>
+
+            <!-- Systems Card -->
+            <div class="pillar-system-card">
+              <h2 class="pillar-system-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+                <span>Systems</span>
+              </h2>
+              <ul class="pillar-system-list">
+                <li>Imput combination.</li>
+                <li>Random enemy spawn.</li>
+                <li>Attack combination and cooldown.</li>
+                <li>Score based system.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Gameplay Showcase Section (Elements Video Player + Wastemancer Overview Images) -->
+          <div class="subpage-pictures-lane">
+            <h3 class="pictures-lane-header">Showcase</h3>
+
+            <!-- Interactive Elemental Magic Player -->
+            <div id="magic-player" style="margin-bottom: 1.5rem; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1.25rem;">
+              <div class="subpage-magic-selector" style="margin-bottom: 0.85rem;">
+                <button class="subpage-magic-btn active magic-icon-btn" data-type="fire" title="Fire Magic">
+                  <img src="assets/images/Wastemancer/fireicon.png" alt="Fire" />
+                  <span>Fire</span>
+                </button>
+                <button class="subpage-magic-btn magic-icon-btn" data-type="water" title="Water Magic">
+                  <img src="assets/images/Wastemancer/watericon.png" alt="Water" />
+                  <span>Water</span>
+                </button>
+                <button class="subpage-magic-btn magic-icon-btn" data-type="earth" title="Earth Magic">
+                  <img src="assets/images/Wastemancer/earthicon.png" alt="Earth" />
+                  <span>Earth</span>
+                </button>
+                <button class="subpage-magic-btn magic-icon-btn" data-type="wind" title="Wind Magic">
+                  <img src="assets/images/Wastemancer/windicon.png" alt="Wind" />
+                  <span>Wind</span>
+                </button>
               </div>
-              <div class="picture-lane-note">Arena gameplay view</div>
-            </div>
-
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/Wastemancer/Wastemancer02.png" alt="Combat encounter" />
+              <div class="subpage-media-frame" style="max-height: 320px; aspect-ratio: 16/9; margin: 0 auto; max-width: 680px;">
+                <video id="magic-video" src="assets/images/Wastemancer/firemovie.mp4" controls autoplay loop muted playsinline></video>
               </div>
-              <div class="picture-lane-note">Combat encounter</div>
+              <p id="magic-caption" class="magic-video-caption" style="margin-top: 0.5rem;">
+                <strong>Fire Magic</strong> — Explosive flame bursts and ignition shader effects authored in Unity VFX Graph.
+              </p>
             </div>
 
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/Wastemancer/Wastemancer03.png" alt="Magical skill feedback" />
+            <!-- 3 Images on Horizontal line for Overview -->
+            <div class="pictures-lane-grid" style="grid-template-columns: repeat(3, 1fr);">
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/Wastemancer/Wastemancer01.png" alt="Arena gameplay view" />
+                </div>
+                <div class="picture-lane-note">Arena gameplay view</div>
               </div>
-              <div class="picture-lane-note">Magical skill feedback</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- SCREEN 3: My Contribution -->
-    <section id="contribution" class="subpage-contribution-section">
-      <div class="container">
-        <div class="contribution-header-wrap">
-          <h2 class="contribution-section-title">My Contribution</h2>
-          <!-- Role navigation buttons -->
-          <div class="contribution-roles-nav">
-            <a href="#waste-narrative-designer" class="contribution-role-btn">Narrative Designer</a>
-            <a href="#waste-level-designer" class="contribution-role-btn">Level Designer</a>
-            <a href="#waste-vfx-artist" class="contribution-role-btn">VFX Artist</a>
-          </div>
-        </div>
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/Wastemancer/Wastemancer02.png" alt="Combat encounter" />
+                </div>
+                <div class="picture-lane-note">Combat encounter</div>
+              </div>
 
-        <div class="contribution-grid">
-          <!-- Narrative Designer -->
-          <div id="waste-narrative-designer" class="contribution-card">
-            <h3 class="contribution-role-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-              </svg>
-              <span>Narrative Designer</span>
-            </h3>
-            <div class="contribution-role-body">
-              <p>Wastemancer takes place in a world where animals behave like humans. The main character is a possum working in a magical recycling department.</p>
-              <p>As the city's defenders capable of fighting trash monsters with magic, you must defeat these creatures and recycle their souls before they overrun the city!</p>
-            </div>
-          </div>
-
-          <!-- Level Designer -->
-          <div id="waste-level-designer" class="contribution-card">
-            <h3 class="contribution-role-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="3" y1="9" x2="21" y2="9"></line>
-                <line x1="9" y1="21" x2="9" y2="9"></line>
-              </svg>
-              <span>Level Designer</span>
-            </h3>
-            <div class="contribution-role-body">
-              <p>I was responsible for designing the main environment and establishing the camera perspective.</p>
-              <p>I started by sketching the initial layout on paper, then translated it into a digital version and created a blockout for the artists to develop further.</p>
-              <p>Throughout the process, I collaborated with the artists to discuss the scene's composition and identify additional elements that needed to be included.</p>
-            </div>
-          </div>
-
-          <!-- VFX Artist -->
-          <div id="waste-vfx-artist" class="contribution-card">
-            <h3 class="contribution-role-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"></path>
-              </svg>
-              <span>VFX Artist</span>
-            </h3>
-            <div class="contribution-role-body">
-              <p>I created five different skills from scratch using Unity's Visual Effect Graph: Water, Earth, Fire, Wind, and Healing.</p>
-              <p>I designed this skills around single-target and multi-target mechanics, ensuring that each effect supported the intended gameplay functionality.</p>
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/Wastemancer/Wastemancer03.png" alt="Magical skill feedback" />
+                </div>
+                <div class="picture-lane-note">Magical skill feedback</div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Place for Images: Push into this place lvl01, lvl02, lvl03, lvl04 from overview page -->
-        <div class="subpage-pictures-lane">
-          <h3 class="pictures-lane-header">Level Design Progression</h3>
-          <div class="pictures-lane-grid" style="grid-template-columns: repeat(4, 1fr);">
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/Wastemancer/Lvl01.png" alt="Drawed area" />
+        <!-- TAB 2: MY CONTRIBUTION (Hidden by default when Overview is active) -->
+        <div id="tab-contribution" class="subpage-tab-panel" style="display: none;">
+          <div class="tab-header-wrap">
+            <h2 class="subpage-tab-heading">My Contribution</h2>
+            <!-- Role navigation buttons -->
+            <div class="contribution-roles-nav">
+              <a href="#waste-narrative-designer" class="contribution-role-btn">Narrative Designer</a>
+              <a href="#waste-level-designer" class="contribution-role-btn">Level Designer</a>
+              <a href="#waste-vfx-artist" class="contribution-role-btn">VFX Artist</a>
+            </div>
+          </div>
+
+          <div class="contribution-grid">
+            <!-- Narrative Designer -->
+            <div id="waste-narrative-designer" class="contribution-card">
+              <h3 class="contribution-role-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                <span>Narrative Designer</span>
+              </h3>
+              <div class="contribution-role-body">
+                <p>Wastemancer takes place in a world where animals behave like humans. The main character is a possum working in a magical recycling department.</p>
+                <p>As the city's defenders capable of fighting trash monsters with magic, you must defeat these creatures and recycle their souls before they overrun the city!</p>
               </div>
-              <div class="picture-lane-note">Drawed area</div>
             </div>
 
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/Wastemancer/Lvl02.png" alt="Level Blockout" />
+            <!-- Level Designer -->
+            <div id="waste-level-designer" class="contribution-card">
+              <h3 class="contribution-role-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+                <span>Level Designer</span>
+              </h3>
+              <div class="contribution-role-body">
+                <p>I was responsible for designing the main environment and establishing the camera perspective.</p>
+                <p>I started by sketching the initial layout on paper, then translated it into a digital version and created a blockout for the artists to develop further.</p>
+                <p>Throughout the process, I collaborated with the artists to discuss the scene's composition and identify additional elements that needed to be included.</p>
               </div>
-              <div class="picture-lane-note">Level Blockout</div>
             </div>
 
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/Wastemancer/Lvl03.png" alt="Camera setup" />
+            <!-- VFX Artist -->
+            <div id="waste-vfx-artist" class="contribution-card">
+              <h3 class="contribution-role-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"></path>
+                </svg>
+                <span>VFX Artist</span>
+              </h3>
+              <div class="contribution-role-body">
+                <p>I created five different skills from scratch using Unity's Visual Effect Graph: Water, Earth, Fire, Wind, and Healing.</p>
+                <p>I designed this skills around single-target and multi-target mechanics, ensuring that each effect supported the intended gameplay functionality.</p>
               </div>
-              <div class="picture-lane-note">Camera setup</div>
             </div>
+          </div>
 
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/Wastemancer/Lvl04.png" alt="Finished view" />
+          <!-- Place for Images: Push into this place lvl01, lvl02, lvl03, lvl04 from overview page -->
+          <div class="subpage-pictures-lane">
+            <h3 class="pictures-lane-header">Level Design Progression</h3>
+            <div class="pictures-lane-grid" style="grid-template-columns: repeat(4, 1fr);">
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/Wastemancer/Lvl01.png" alt="Drawed area" />
+                </div>
+                <div class="picture-lane-note">Drawed area</div>
               </div>
-              <div class="picture-lane-note">Finished view</div>
+
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/Wastemancer/Lvl02.png" alt="Level Blockout" />
+                </div>
+                <div class="picture-lane-note">Level Blockout</div>
+              </div>
+
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/Wastemancer/Lvl03.png" alt="Camera setup" />
+                </div>
+                <div class="picture-lane-note">Camera setup</div>
+              </div>
+
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/Wastemancer/Lvl04.png" alt="Finished view" />
+                </div>
+                <div class="picture-lane-note">Finished view</div>
+              </div>
             </div>
           </div>
         </div>

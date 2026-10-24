@@ -24,10 +24,61 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initSubpageTabs() {
-  const tabs = document.querySelectorAll('.subpage-section-tab, .contribution-role-btn');
-  tabs.forEach(tab => {
-    tab.addEventListener('mouseenter', () => sfx.hover());
-    tab.addEventListener('click', () => sfx.click());
+  const tabBtns = document.querySelectorAll('.subpage-section-tab');
+  const panels = document.querySelectorAll('.subpage-tab-panel');
+  const roleBtns = document.querySelectorAll('.contribution-role-btn');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('mouseenter', () => sfx.hover());
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      sfx.click();
+
+      const target = btn.getAttribute('data-tab-target');
+      if (!target) return;
+
+      // Sync active state across all tab buttons
+      tabBtns.forEach(b => {
+        if (b.getAttribute('data-tab-target') === target) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+
+      // Toggle tab panels
+      panels.forEach(panel => {
+        if (panel.id === `tab-${target}`) {
+          panel.classList.add('active');
+          panel.style.display = 'block';
+        } else {
+          panel.classList.remove('active');
+          panel.style.display = 'none';
+        }
+      });
+
+      // Smooth scroll to the tabbed content area
+      const tabsSection = document.getElementById('game-tabs-section');
+      if (tabsSection) {
+        tabsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Smooth scroll for role navigation buttons inside My Contribution
+  roleBtns.forEach(btn => {
+    btn.addEventListener('mouseenter', () => sfx.hover());
+    btn.addEventListener('click', (e) => {
+      const targetId = btn.getAttribute('href');
+      if (targetId && targetId.startsWith('#')) {
+        const targetElem = document.querySelector(targetId);
+        if (targetElem) {
+          e.preventDefault();
+          sfx.click();
+          targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
   });
 }
 

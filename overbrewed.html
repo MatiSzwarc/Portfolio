@@ -116,145 +116,164 @@
 
         <!-- Section Navigation Tabs -->
         <div class="subpage-section-tabs">
-          <a href="#overview" class="subpage-section-tab">Overview</a>
-          <a href="#contribution" class="subpage-section-tab">My Contribution</a>
+          <button type="button" class="subpage-section-tab active" data-tab-target="overview">
+            <span>Overview</span>
+          </button>
+          <button type="button" class="subpage-section-tab" data-tab-target="contribution">
+            <span>My Contribution</span>
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- SCREEN 2: Overview (Roles, Design Pillars + Systems, Bottom Pictures on Horizontal Line) -->
-    <section id="overview" class="subpage-screen-2">
+    <!-- SCREEN 2: Tabbed Content (Overview & My Contribution) -->
+    <section class="subpage-screen-2" id="game-tabs-section">
       <div class="container">
-        <!-- Design Pillars + Systems Grid -->
-        <div class="screen-2-grid">
-          <!-- Design Pillars Card -->
-          <div class="pillar-system-card">
-            <h2 class="pillar-system-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M12 8v8"></path>
-                <path d="M8 12h8"></path>
-              </svg>
-              <span>Design Pillars</span>
-            </h2>
-            <ul class="pillar-system-list">
-              <li>Local co-op game working on few PCs at once.</li>
-              <li>Choose one of roles : Alchemist or Shopkeeper.</li>
-              <li>Receive order , cooperate with your teammate to finish it before customer get inpatient.</li>
-            </ul>
-          </div>
-
-          <!-- Systems Card -->
-          <div class="pillar-system-card">
-            <h2 class="pillar-system-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-              </svg>
-              <span>Systems</span>
-            </h2>
-            <ul class="pillar-system-list">
-              <li>Players can pick up, carry, and throw items.</li>
-              <li>Multiplayer game architecture.</li>
-              <li>Queue system for NPC.</li>
-              <li>Each station offers a different interaction.</li>
-            </ul>
-          </div>
+        <!-- Tab Bar inside Screen 2 -->
+        <div class="subpage-section-tabs" style="margin-top: 0; margin-bottom: 2.25rem; border-top: none; padding-top: 0;">
+          <button type="button" class="subpage-section-tab active" data-tab-target="overview">
+            <span>Overview</span>
+          </button>
+          <button type="button" class="subpage-section-tab" data-tab-target="contribution">
+            <span>My Contribution</span>
+          </button>
         </div>
 
-        <!-- Bottom Pictures Lane (At least 3 in horizontal line, 3-5 word notes) -->
-        <div class="subpage-pictures-lane">
-          <h3 class="pictures-lane-header">Showcase</h3>
-          <div class="pictures-lane-grid" style="grid-template-columns: repeat(3, 1fr);">
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/Overbrewed/Overbrewed01.png" alt="shop area" />
-              </div>
-              <div class="picture-lane-note">shop area</div>
-            </div>
-
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/Overbrewed/Overbrewed02.png" alt="alchemist cauldron" />
-              </div>
-              <div class="picture-lane-note">alchemist cauldron</div>
-            </div>
-
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/Overbrewed/Overbrewed03.png" alt="enchanting table" />
-              </div>
-              <div class="picture-lane-note">enchanting table</div>
-            </div>
+        <!-- TAB 1: OVERVIEW -->
+        <div id="tab-overview" class="subpage-tab-panel active">
+          <div class="tab-header-wrap">
+            <h2 class="subpage-tab-heading">Overview</h2>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- SCREEN 3: My Contribution -->
-    <section id="contribution" class="subpage-contribution-section">
-      <div class="container">
-        <div class="contribution-header-wrap">
-          <h2 class="contribution-section-title">My Contribution</h2>
-          <!-- Role navigation buttons -->
-          <div class="contribution-roles-nav">
-            <a href="#overbrewed-system-designer" class="contribution-role-btn">System Designer</a>
-            <a href="#overbrewed-vfx-artist" class="contribution-role-btn">VFX Artist</a>
-          </div>
-        </div>
+          <!-- Design Pillars + Systems Grid -->
+          <div class="screen-2-grid">
+            <!-- Design Pillars Card -->
+            <div class="pillar-system-card">
+              <h2 class="pillar-system-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 8v8"></path>
+                  <path d="M8 12h8"></path>
+                </svg>
+                <span>Design Pillars</span>
+              </h2>
+              <ul class="pillar-system-list">
+                <li>Local co-op game working on few PCs at once.</li>
+                <li>Choose one of roles : Alchemist or Shopkeeper.</li>
+                <li>Receive order , cooperate with your teammate to finish it before customer get inpatient.</li>
+              </ul>
+            </div>
 
-        <div class="contribution-grid">
-          <!-- System Designer -->
-          <div id="overbrewed-system-designer" class="contribution-card">
-            <h3 class="contribution-role-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-              </svg>
-              <span>System Designer</span>
-            </h3>
-            <div class="contribution-role-body">
-              <p>I joined the project at a relatively late stage, so my main goal was to review the existing code and polish the gameplay experience, focusing on improving player feedback.</p>
-              <p>I primarily worked on the stations, refining their interactions and making the alchemist's gameplay more complex. The goal was to create a clearer distinction between the Alchemist and Shopkeeper roles, ensuring that each offered a different gameplay experience.</p>
+            <!-- Systems Card -->
+            <div class="pillar-system-card">
+              <h2 class="pillar-system-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+                <span>Systems</span>
+              </h2>
+              <ul class="pillar-system-list">
+                <li>Players can pick up, carry, and throw items.</li>
+                <li>Multiplayer game architecture.</li>
+                <li>Queue system for NPC.</li>
+                <li>Each station offers a different interaction.</li>
+              </ul>
             </div>
           </div>
 
-          <!-- VFX Artist -->
-          <div id="overbrewed-vfx-artist" class="contribution-card">
-            <h3 class="contribution-role-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"></path>
-              </svg>
-              <span>VFX Artist</span>
-            </h3>
-            <div class="contribution-role-body">
-              <p>I created visual effects for various gameplay interactions. These included puddles left by dropped flasks, small smoke effects when enchanting potions, and visual effects for the stations and their interactions.</p>
-              <p>I also programmed a magical ribbon effect to reference game hard on screen from first minute that is happening in magical world.</p>
+          <!-- Bottom Pictures Lane (At least 3 in horizontal line, 3-5 word notes) -->
+          <div class="subpage-pictures-lane">
+            <h3 class="pictures-lane-header">Showcase</h3>
+            <div class="pictures-lane-grid" style="grid-template-columns: repeat(3, 1fr);">
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/Overbrewed/Overbrewed01.png" alt="shop area" />
+                </div>
+                <div class="picture-lane-note">shop area</div>
+              </div>
+
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/Overbrewed/Overbrewed02.png" alt="alchemist cauldron" />
+                </div>
+                <div class="picture-lane-note">alchemist cauldron</div>
+              </div>
+
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/Overbrewed/Overbrewed03.png" alt="enchanting table" />
+                </div>
+                <div class="picture-lane-note">enchanting table</div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Place for Images: 3 of them named OverbrewedTech01, OverbrewedTech02, OverbrewedTech03 -->
-        <div class="subpage-pictures-lane">
-          <h3 class="pictures-lane-header">Technical Showcase</h3>
-          <div class="pictures-lane-grid" style="grid-template-columns: repeat(3, 1fr);">
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/Overbrewed/OverbrewedTech01.png" alt="Overbrewed Technical 01" />
+        <!-- TAB 2: MY CONTRIBUTION (Hidden by default when Overview is active) -->
+        <div id="tab-contribution" class="subpage-tab-panel" style="display: none;">
+          <div class="tab-header-wrap">
+            <h2 class="subpage-tab-heading">My Contribution</h2>
+            <!-- Role navigation buttons -->
+            <div class="contribution-roles-nav">
+              <a href="#overbrewed-system-designer" class="contribution-role-btn">System Designer</a>
+              <a href="#overbrewed-vfx-artist" class="contribution-role-btn">VFX Artist</a>
+            </div>
+          </div>
+
+          <div class="contribution-grid">
+            <!-- System Designer -->
+            <div id="overbrewed-system-designer" class="contribution-card">
+              <h3 class="contribution-role-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+                <span>System Designer</span>
+              </h3>
+              <div class="contribution-role-body">
+                <p>I joined the project at a relatively late stage, so my main goal was to review the existing code and polish the gameplay experience, focusing on improving player feedback.</p>
+                <p>I primarily worked on the stations, refining their interactions and making the alchemist's gameplay more complex. The goal was to create a clearer distinction between the Alchemist and Shopkeeper roles, ensuring that each offered a different gameplay experience.</p>
               </div>
-              <div class="picture-lane-note">Technical Showcase 01</div>
             </div>
 
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/Overbrewed/OverbrewedTech02.png" alt="Overbrewed Technical 02" />
+            <!-- VFX Artist -->
+            <div id="overbrewed-vfx-artist" class="contribution-card">
+              <h3 class="contribution-role-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"></path>
+                </svg>
+                <span>VFX Artist</span>
+              </h3>
+              <div class="contribution-role-body">
+                <p>I created visual effects for various gameplay interactions. These included puddles left by dropped flasks, small smoke effects when enchanting potions, and visual effects for the stations and their interactions.</p>
+                <p>I also programmed a magical ribbon effect to reference game hard on screen from first minute that is happening in magical world.</p>
               </div>
-              <div class="picture-lane-note">Technical Showcase 02</div>
             </div>
+          </div>
 
-            <div class="picture-lane-card">
-              <div class="picture-lane-thumb">
-                <img src="assets/images/Overbrewed/OverbrewedTech03.png" alt="Overbrewed Technical 03" />
+          <!-- Place for Images: 3 of them named OverbrewedTech01, OverbrewedTech02, OverbrewedTech03 -->
+          <div class="subpage-pictures-lane">
+            <h3 class="pictures-lane-header">Technical Showcase</h3>
+            <div class="pictures-lane-grid" style="grid-template-columns: repeat(3, 1fr);">
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/Overbrewed/OverbrewedTech01.png" alt="Overbrewed Technical 01" />
+                </div>
+                <div class="picture-lane-note">Technical Showcase 01</div>
               </div>
-              <div class="picture-lane-note">Technical Showcase 03</div>
+
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/Overbrewed/OverbrewedTech02.png" alt="Overbrewed Technical 02" />
+                </div>
+                <div class="picture-lane-note">Technical Showcase 02</div>
+              </div>
+
+              <div class="picture-lane-card">
+                <div class="picture-lane-thumb">
+                  <img src="assets/images/Overbrewed/OverbrewedTech03.png" alt="Overbrewed Technical 03" />
+                </div>
+                <div class="picture-lane-note">Technical Showcase 03</div>
+              </div>
             </div>
           </div>
         </div>
