@@ -307,7 +307,7 @@ section {
 /* Project Card */
 .wix-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var#034AB0;
   border-radius: 14px;
   overflow: hidden;
   display: flex;
