@@ -114,11 +114,17 @@
             </div>
           </div>
         </div>
+
+        <!-- Section Navigation Tabs -->
+        <div class="subpage-section-tabs">
+          <a href="#overview" class="subpage-section-tab">Overview</a>
+          <a href="#contribution" class="subpage-section-tab">My Contribution</a>
+        </div>
       </div>
     </section>
 
-    <!-- SCREEN 2: Roles, Design Pillars + Systems, Bottom Pictures on Horizontal Line -->
-    <section class="subpage-screen-2">
+    <!-- SCREEN 2: Overview (Roles, Design Pillars + Systems, Bottom Pictures on Horizontal Line) -->
+    <section id="overview" class="subpage-screen-2">
       <div class="container">
         <!-- Design Pillars + Systems Grid -->
         <div class="screen-2-grid">
@@ -133,10 +139,10 @@
               <span>Design Pillars</span>
             </h2>
             <ul class="pillar-system-list">
-              <li>resource management.</li>
-              <li>keep your population happy or face doom.</li>
-              <li>story driven situations with different outcomes.</li>
-              <li>resurrect your people but be careful not everyone likes to work with zombies.</li>
+              <li>Every resource management.</li>
+              <li>Keep your population happy or face doom.</li>
+              <li>Story driven situations with different outcomes.</li>
+              <li>Resurrect your people but be careful not everyone likes to work with zombies.</li>
             </ul>
           </div>
 
@@ -150,9 +156,9 @@
             </h2>
             <ul class="pillar-system-list">
               <li>Place buildings on grid.</li>
-              <li>manage your population sending them to different work places.</li>
+              <li>Manage your population sending them to different work places.</li>
               <li>Narrative events scaled with progression.</li>
-              <li>resurrection mechanic to boost your economy.</li>
+              <li>Resurrection mechanic to boost your economy.</li>
             </ul>
           </div>
         </div>
@@ -160,6 +166,109 @@
         <!-- Bottom Pictures Lane (At least 3 in horizontal line, 3-5 word notes) -->
         <div class="subpage-pictures-lane">
           <h3 class="pictures-lane-header">Showcase</h3>
+          <div class="pictures-lane-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="picture-lane-card">
+              <div class="picture-lane-thumb">
+                <img src="assets/images/Necromeowcy/Necromeowcy01.png" alt="Town expansion overview" />
+              </div>
+              <div class="picture-lane-note">Town expansion overview</div>
+            </div>
+
+            <div class="picture-lane-card">
+              <div class="picture-lane-thumb">
+                <img src="assets/images/Necromeowcy/Necromeowcy02.png" alt="Quest progression choice" />
+              </div>
+              <div class="picture-lane-note">Quest progression choice</div>
+            </div>
+
+            <div class="picture-lane-card">
+              <div class="picture-lane-thumb">
+                <img src="assets/images/Necromeowcy/Necromeowcy03.png" alt="Economic resource management" />
+              </div>
+              <div class="picture-lane-note">Economic resource management</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 3: My Contribution -->
+    <section id="contribution" class="subpage-contribution-section">
+      <div class="container">
+        <div class="contribution-header-wrap">
+          <h2 class="contribution-section-title">My Contribution</h2>
+          <!-- Role navigation buttons -->
+          <div class="contribution-roles-nav">
+            <a href="#necro-narrative-design" class="contribution-role-btn">Narrative Design</a>
+            <a href="#necro-quest-design" class="contribution-role-btn">Quest Design</a>
+            <a href="#necro-system-design" class="contribution-role-btn">System Design</a>
+            <a href="#necro-vfx-art" class="contribution-role-btn">VFX Art</a>
+          </div>
+        </div>
+
+        <div class="contribution-grid">
+          <!-- Narrative Design -->
+          <div id="necro-narrative-design" class="contribution-card">
+            <h3 class="contribution-role-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+              <span>Narrative Design</span>
+            </h3>
+            <div class="contribution-role-body">
+              <p>We decided to build the game's narrative around a combination of cute aesthetics and dark themes, ultimately creating a necromancer cat as our main character.</p>
+              <p>We integrated the narrative into the gameplay through events that show up as players progress. Each event presents three different choices, leading to different outcomes depending on the player's decisions.</p>
+            </div>
+          </div>
+
+          <!-- Quest Design -->
+          <div id="necro-quest-design" class="contribution-card">
+            <h3 class="contribution-role-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              <span>Quest Design</span>
+            </h3>
+            <div class="contribution-role-body">
+              <p>The game features around 17 unique story events, categorized into Easy, Medium, and Hard difficulty levels based on the player's progression.</p>
+              <p>Each event was designed to tell a different story within the game's world, introducing situations that could occur during gameplay, the characters involved, and the possible outcomes of the player's choices.</p>
+            </div>
+          </div>
+
+          <!-- System Design -->
+          <div id="necro-system-design" class="contribution-card">
+            <h3 class="contribution-role-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+              <span>System Design</span>
+            </h3>
+            <div class="contribution-role-body">
+              <p>During that time I wasn't really knowledgable about how to make games in Unity, but I tried my best in creating whatever I could making our main programmer do harder tasks.</p>
+              <p>At the end of the project I decided to go through it and make game playable, so current state of the game took me around month of looking at someone else code, making it work better and as it should.</p>
+              <p>I fixed game ending after few days, fixed npcs walking around to go inside building at night and small other bugs made during harsh time of week development. I learned from that a lot about coding in Unity from more experienced people than me.</p>
+            </div>
+          </div>
+
+          <!-- VFX Art -->
+          <div id="necro-vfx-art" class="contribution-card">
+            <h3 class="contribution-role-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"></path>
+              </svg>
+              <span>VFX Art</span>
+            </h3>
+            <div class="contribution-role-body">
+              <p>The game features several particle effects, with a particular focus on the base energy resource called PURR.</p>
+              <p>While experimenting with ways to animate this energy, I ended up creating a shader. It was the first advanced shader I had made for my portfolio, and the experience sparked my passion for VFX.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Place of Images: Push every image from Overview page to here -->
+        <div class="subpage-pictures-lane">
+          <h3 class="pictures-lane-header">Technical &amp; Systems Breakdown</h3>
           <div class="pictures-lane-grid" style="grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));">
             <div class="picture-lane-card">
               <div class="picture-lane-thumb">

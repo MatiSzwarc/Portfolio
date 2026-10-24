@@ -930,7 +930,7 @@ section {
 }
 
 .pillar-system-list li::before {
-  content: '•';
+  content: 'â€¢';
   position: absolute;
   left: 0.2rem;
   color: #ffffff;
@@ -1058,6 +1058,177 @@ section {
 .lightbox-close:hover {
   background: #fff;
   color: #000;
+}
+
+/* ==========================================================================
+   Subpage Section Navigation Tabs (Overview & My Contribution)
+   ========================================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+.subpage-section-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.15rem;
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.subpage-section-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.85rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  letter-spacing: -0.2px;
+}
+
+.subpage-section-tab:hover {
+  background: #ffffff;
+  color: #0c0d12;
+  border-color: #ffffff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.45);
+  transform: translateY(-2px);
+}
+
+.subpage-screen-2 {
+  scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+
+/* ==========================================================================
+   Section 3: My Contribution
+   ========================================================================== */
+.subpage-contribution-section {
+  min-height: 100vh;
+  padding: 4.5rem 0 3.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 1px solid var(--border-subtle);
+  background: rgba(12, 14, 20, 0.6);
+  scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+
+.contribution-header-wrap {
+  text-align: center;
+  margin-bottom: 2.25rem;
+}
+
+.contribution-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.2vw, 2.35rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.4px;
+}
+
+/* Clickable role buttons at top of My Contribution section */
+.contribution-roles-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.contribution-role-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  padding: 0.5rem 1.15rem;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.contribution-role-btn:hover {
+  background: #ffffff;
+  color: #0c0d12;
+  border-color: #ffffff;
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Contribution role content cards */
+.contribution-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin-bottom: 2.75rem;
+}
+
+.contribution-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 1.75rem 2.25rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  scroll-margin-top: calc(var(--header-height) + 1.75rem);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.contribution-card:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.contribution-role-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  letter-spacing: -0.2px;
+}
+
+.contribution-role-body {
+  color: var(--text-secondary);
+  font-size: 0.94rem;
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.contribution-role-body p {
+  margin: 0;
+}
+
+.contribution-subitem {
+  background: rgba(255, 255, 255, 0.035);
+  border-left: 3px solid rgba(255, 255, 255, 0.35);
+  padding: 0.6rem 0.95rem;
+  border-radius: 0 8px 8px 0;
+  margin: 0.2rem 0;
+}
+
+.contribution-subitem strong {
+  color: #ffffff;
 }
 
 /* ==========================================================================

@@ -140,7 +140,10 @@ function renderProjects(categoryFilter = 'all') {
         <div class="engine-badge-overlay" title="${project.engine}">
           <img src="${project.engineIcon}" alt="${project.engine} icon" />
         </div>
-        <img src="${project.thumbnail}" alt="${project.title} gameplay GIF" loading="lazy" />
+        ${project.thumbnail.endsWith('.mp4')
+          ? `<video src="${project.thumbnail}" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none;"></video>`
+          : `<img src="${project.thumbnail}" alt="${project.title} gameplay GIF" loading="lazy" />`
+        }
       </a>
       <div class="card-content">
         <h3 class="card-title">

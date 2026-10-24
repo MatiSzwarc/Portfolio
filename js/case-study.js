@@ -18,7 +18,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Elemental Magic Video Player (Wastemancer)
   initMagicVideoPlayer();
+
+  // Section tabs & contribution role buttons interactions
+  initSubpageTabs();
 });
+
+function initSubpageTabs() {
+  const tabs = document.querySelectorAll('.subpage-section-tab, .contribution-role-btn');
+  tabs.forEach(tab => {
+    tab.addEventListener('mouseenter', () => sfx.hover());
+    tab.addEventListener('click', () => sfx.click());
+  });
+}
 
 function initCaseStudyNav() {
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');

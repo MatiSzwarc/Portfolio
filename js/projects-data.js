@@ -5,6 +5,52 @@
 
 export const projects = [
   {
+    id: "prism-of-darkness",
+    title: "Prism of Darkness",
+    tagline: "Turn-based combat | Fantasy",
+    category: "unreal",
+    engine: "Unreal Engine 5",
+    engineIcon: "assets/icons/Unrealicon.png",
+    thumbnail: "assets/images/PrismOfDarkness.mp4",
+    pageUrl: "prism-of-darkness.html",
+    metaLine1: "| Turn Based Combat | Fantasy |",
+    metaLine2: "| One month | PC | Team Size: 8 |",
+    metaLine3: "| System Designer | Animation Implementation | UI programming |",
+    itchUrl: "",
+    isSoon: true,
+    quickStats: [
+      { label: "Engine", value: "Unreal Engine 5" },
+      { label: "Duration", value: "1 Month" },
+      { label: "Team Size", value: "8 Developers" },
+      { label: "Platform", value: "PC" }
+    ],
+    summary: "An upcoming tactical fantasy turn-based combat game developed in Unreal Engine 5. Strategic ability timing, dynamic character animations, and intuitive tactical interface.",
+    myRoles: [
+      "System Designer",
+      "Animation Implementation",
+      "UI Programming"
+    ],
+    designPillars: [
+      "Dark fantasy world",
+      "Epic quality attack sequences",
+      "Turn base system with Quick time events."
+    ],
+    systems: [
+      "3 different characters to play.",
+      "Turn based combat.",
+      "Over 30 sequences across game.",
+      "6 Different maps",
+      "Loading screen",
+      "Complex UI system",
+      "Status effects, enemy and hero types"
+    ],
+    highlights: [
+      "System Designer: Formulating tactical turn-based combat systems, ability interactions, and action economy.",
+      "Animation Implementation: Implementing responsive animation state trees, combat montages, and hit-reaction feedback in Unreal Engine 5.",
+      "UI Programming: Designing and programming tactical combat interfaces, turn-order trackers, and ability selection HUDs."
+    ]
+  },
+  {
     id: "overbrewed",
     title: "Overbrewed",
     tagline: "Magic shop simulator | Multiplayer",
@@ -92,52 +138,6 @@ export const projects = [
     ]
   },
   {
-    id: "prism-of-darkness",
-    title: "Prism of Darkness",
-    tagline: "Turn-based combat | Fantasy",
-    category: "unreal",
-    engine: "Unreal Engine 5",
-    engineIcon: "assets/icons/Unrealicon.png",
-    thumbnail: "assets/images/PrismOfDarkness.png",
-    pageUrl: "prism-of-darkness.html",
-    metaLine1: "| Turn Based Combat | Fantasy |",
-    metaLine2: "| One month | PC | Team Size: 8 |",
-    metaLine3: "| System Designer | Animation Implementation | UI programming |",
-    itchUrl: "",
-    isSoon: true,
-    quickStats: [
-      { label: "Engine", value: "Unreal Engine 5" },
-      { label: "Duration", value: "1 Month" },
-      { label: "Team Size", value: "8 Developers" },
-      { label: "Platform", value: "PC" }
-    ],
-    summary: "An upcoming tactical fantasy turn-based combat game developed in Unreal Engine 5. Strategic ability timing, dynamic character animations, and intuitive tactical interface.",
-    myRoles: [
-      "System Designer",
-      "Animation Implementation",
-      "UI Programming"
-    ],
-    designPillars: [
-      "Dark fantasy world",
-      "Epic quality attack sequences",
-      "turn base system with Quick time events."
-    ],
-    systems: [
-      "3 different characters to play.",
-      "Turn based combat.",
-      "Over 30 sequences across game.",
-      "6 Different maps",
-      "Loading screen",
-      "Complex UI system",
-      "Status effects, enemy and hero types"
-    ],
-    highlights: [
-      "System Designer: Formulating tactical turn-based combat systems, ability interactions, and action economy.",
-      "Animation Implementation: Implementing responsive animation state trees, combat montages, and hit-reaction feedback in Unreal Engine 5.",
-      "UI Programming: Designing and programming tactical combat interfaces, turn-order trackers, and ability selection HUDs."
-    ]
-  },
-  {
     id: "wastemancer",
     title: "Wastemancer",
     tagline: "Fast-paced magical arcade action game",
@@ -207,16 +207,16 @@ export const projects = [
       "VFX Art"
     ],
     designPillars: [
-      "resource management.",
-      "keep your population happy or face doom.",
-      "story driven situations with different outcomes.",
-      "resurrect your people but be careful not everyone likes to work with zombies."
+      "Every resource management.",
+      "Keep your population happy or face doom.",
+      "Story driven situations with different outcomes.",
+      "Resurrect your people but be careful not everyone likes to work with zombies."
     ],
     systems: [
       "Place buildings on grid.",
-      "manage your population sending them to different work places.",
+      "Manage your population sending them to different work places.",
       "Narrative events scaled with progression.",
-      "resurrection mechanic to boost your economy."
+      "Resurrection mechanic to boost your economy."
     ],
     highlights: [
       "Narrative Design: Finished the story fast under a 1-week deadline to ensure all team members worked towards the same goal without misinterpretation.",
@@ -252,7 +252,7 @@ export const projects = [
       "VFX"
     ],
     designPillars: [
-      "mobile game.",
+      "Mobile game.",
       "Tower defense , roguelite.",
       "Kill enemies upgrade your towers, Lose upgrade further."
     ],
@@ -273,12 +273,12 @@ export const projects = [
 export const bioData = {
   name: "Mateusz Szwarc",
   title: "Game Designer",
-  tagline: "Crafting engaging mechanics, tactile VFX, and responsive gameplay systems in Unreal Engine 5 and Unity.",
+  tagline: "Game Designer with over 1,5 year experience. Gaming nerd since young age, Anime enjoyer and jrpg fan, with a lot of hours in strategy games.",
   email: "engmatiszwarc@gmail.com",
   cvUrl: "https://canva.link/f33jqqh899scqk2",
   linkedinUrl: "http://www.linkedin.com/in/mszw",
   itchUrl: "https://zabiii.itch.io",
   futuregamesUrl: "https://futuregames.se",
   experienceYears: "1.5 Years",
-  bio: "I am a Game Designer with hands-on experience in Unreal Engine 5 (1 year, confident) and Unity (6 months). Having collaborated on multi-disciplinary teams of up to 12 developers at Futuregames and in competitive game jams, my work spans Product Ownership, lead design, state tree AI programming, and authoring explosive Niagara / VFX Graph particle effects."
+  bio: "Game Designer with over 1,5 year experience. Gaming nerd since young age, Anime enjoyer and jrpg fan, with a lot of hours in strategy games."
 };
