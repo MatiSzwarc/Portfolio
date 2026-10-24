@@ -13,9 +13,9 @@
   --bg-card-hover: rgba(26, 29, 39, 0.98);
   --bg-glass: rgba(12, 13, 18, 0.92);
 
-  --border-subtle: rgba(255, 255, 255, 0.12);
-  --border-accent: rgba(255, 255, 255, 0.35);
-  --border-glow: rgba(255, 255, 255, 0.8);
+  --border-subtle: rgba(3, 74, 176, 0.5);
+  --border-accent: rgba(3, 74, 176, 0.5);
+  --border-glow: rgba(3, 74, 176, 1);
 
   --text-primary: #ffffff;
   --text-secondary: #c3c3c3; /* Wix silver-grey */
@@ -622,7 +622,7 @@ section {
   gap: 0.6rem;
   padding: 0.55rem 1.15rem;
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid var(--border-subtle);
   border-radius: 8px;
   color: #ffffff;
   font-family: var(--font-display);
@@ -804,7 +804,7 @@ section {
   align-items: center;
   gap: 0.45rem;
   background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid var(--border-subtle);
   padding: 0.35rem 0.8rem;
   border-radius: 999px;
   font-size: 0.8rem;
@@ -862,7 +862,7 @@ section {
 
 .subpage-role-pill {
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--border-subtle);
   color: #ffffff;
   padding: 0.32rem 0.75rem;
   border-radius: 999px;
