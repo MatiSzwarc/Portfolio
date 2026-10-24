@@ -457,7 +457,7 @@ section {
   height: 36px;
   border-radius: 7px;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid #034AB0;
   color: var(--text-secondary);
   text-decoration: none;
   transition: all var(--transition-fast);
