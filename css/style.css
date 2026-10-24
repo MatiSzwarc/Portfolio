@@ -1001,7 +1001,7 @@ section {
   color: var(--text-primary);
   text-align: center;
   background: rgba(18, 20, 27, 0.95);
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid #034AB0;
   line-height: 1.35;
 }
 
